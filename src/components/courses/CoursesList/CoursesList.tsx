@@ -22,8 +22,8 @@ const subjectsPage: React.FC<ISubjectsPage> = ({
 	subjects,
 }) => {
 	const [currentSubject, setCurrentSubject] = useState<string | null>(null);
-
 	const { router } = useRoute();
+
 	const getColorSubject = (type: string, color: string): string => {
 		if (currentSubject !== null) {
 			return currentSubject === type ? '#fff' : '#000';

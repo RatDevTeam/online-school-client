@@ -45,6 +45,9 @@ button {
   font-size: 16px;
   box-sizing: border-box;
   color: white;
+  &.price {
+    background-color: $green;
+  }
 }
 
 .ui-button {
@@ -65,6 +68,16 @@ button {
       background-color: $dark-red;
     }
     &:focus { outline: none; }
+  }
+  &.link {
+    border: 2px solid $accent-red;
+    color: $accent-red;
+    cursor: pointer;
+    &:focus { outline: none; }
+    &:hover {
+      border: 2px solid $green;
+      color: $green;
+    }
   }
   &.secondary {
     border: 2px solid $green;
