@@ -126,8 +126,6 @@ const LandingPage: React.FC<ILandingPageProps> = () => {
 					</div>
 				</div>
 			</div>
-			<h2>Отзывы учеников</h2>
-			<Feedback />
 		</>
 	);
 };
