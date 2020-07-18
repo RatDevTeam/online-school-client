@@ -19,7 +19,7 @@ const MainHeader: React.FC = () => {
 	return (
 		<header
 			className="header"
-			// onMouseLeave={() => setRightClass(['header__right'])}
+			onMouseLeave={() => setRightClass(['header__right'])}
 		>
 			<div className="header__title" id="header">
 				<h2>
