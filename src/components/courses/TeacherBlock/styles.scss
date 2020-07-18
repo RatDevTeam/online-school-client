@@ -1,0 +1,41 @@
+.container-teacher {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  height: 200px;
+  &__info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    margin-left: 20px;
+    &__link {
+      display: flex;
+      flex-direction: row;
+      padding: 10px 20px;
+      border-radius: 100px;
+      max-height: 55px;
+      border: 3px solid #FBBC23;
+      width: min-content;
+      justify-content: flex-start;
+      align-items: center;
+      white-space: nowrap;
+      box-sizing: border-box;
+      transition: all 300ms ease;
+      &__text {
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 10px;
+      }
+      &:hover {
+        box-shadow: 0 0 0 2px #FBBC23;
+      }
+    }
+  }
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
