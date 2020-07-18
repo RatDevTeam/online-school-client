@@ -21,11 +21,9 @@ const MainHeader: React.FC = () => {
 			className="header"
 			// onMouseLeave={() => setRightClass(['header__right'])}
 		>
-			<div className="header__title" id="header">
-				<h2>
-					Лик<span className="header__title__color-text">Б</span>ез
-				</h2>
-			</div>
+			<Link routeName="home">
+				<div className="header__title" id="header" />
+			</Link>
 			<span
 				className="header__icon-menu"
 				role="button"
@@ -45,10 +43,10 @@ const MainHeader: React.FC = () => {
 								</Link>
 								{item.submenu ? (
 									<ul className="header__right__submenu">
-										{item.submenu.map((subItem) => (
+										{item.submenu.map((subItem: any) => (
 											<li>
 												<Link routeName={subItem.routerName} key={subItem.id}>
-													{subItem.label}
+													<span>{subItem.label}</span>
 												</Link>
 											</li>
 										))}
@@ -58,11 +56,7 @@ const MainHeader: React.FC = () => {
 						))}
 					</ul>
 				</nav>
-				<button
-					type="button"
-					className="ui-button"
-					style={{ background: 'red' }}
-				>
+				<button type="button" className="ui-button secondary">
 					Войти
 				</button>
 			</div>
