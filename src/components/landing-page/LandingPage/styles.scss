@@ -1,0 +1,161 @@
+@import '~Styles/variables';
+.landing {
+  &__container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 560px 1250px 740px 730px 570px;
+    padding: 0 6em 0 6em;
+    grid-template-areas:
+    "landing-title"
+    "advantages"
+    "how-to-study"
+    "free-webinar"
+    "feedback-carousel"
+  }
+  &__title {
+    grid-area: landing-title;
+    background-color: $white;
+    display: flex;
+    &__left {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 50%;
+      justify-content: center;
+
+      h2{
+        color: $dark-blue;
+        font-size: 36px;
+        line-height: 49px;
+        margin: 0;
+      }
+      p{
+        color: $grey-text;
+      }
+      button{
+        background-color: $accent-red;
+        color: $white;
+        padding: 0 5rem 0 5rem;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        height: 50px;
+        width: 20em;
+      }
+    }
+  }
+  &__free-webinar{
+    grid-area: free-webinar;
+    perspective: 1px;
+    height: 80vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    &__parallax {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    &-back{
+      border: #979797;
+      transform: translateZ(-1px);
+      background-image: url("/public/free-webinar.jpg");
+      background-size: auto;
+    }
+    &-front {
+      transform: translateZ(0);
+    }
+
+    &__title{
+      h2{
+        color: $white;
+        font-size: 48px;
+        padding-top: 100px;
+        text-align: center;
+      }
+    }
+    &__body{
+      display: flex;
+      flex-direction: row;
+      &__left{
+        background: rgba(255, 255, 255, 0.5);
+        padding: 6em 100px 3em 100px;
+        button{
+          background-color: $accent-red;
+          color: $white;
+          padding: 0 5rem 0 5rem;
+          text-align: center;
+          font-size: 18px;
+          font-weight: bold;
+          height: 50px;
+          width: 15em;
+        }
+      p{
+        color: $dark-blue;
+        font-weight: bold;
+        font-size: 24px;
+      }}
+      &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h3{
+          color: $white;
+          font-size: 48px;
+          text-align: center;
+        }
+        li{
+          list-style-type: none;
+color: $white;
+          font-weight: bold;
+        }
+        li:before {
+          content: '►';
+          margin-left: -20px; margin-right: 10px;
+          color: $accent-red;
+        }
+
+      }
+  }
+  }
+  &__how-to-study {
+    grid-area: how-to-study;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      h2 {
+        color: $dark-blue;
+        padding-top: 100px;
+        font-size: 48px;
+        font-weight: bold;
+        text-align: center;
+        margin: 0;
+      }
+      span {
+        color: $accent-red;
+      }
+    }
+
+    &-body {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      p{
+        color: $dark-grey-text;
+        font-weight: normal;
+        font-size: 18px;
+        padding: 0 2em 0 2em ;
+      }
+      &__img {
+        background: no-repeat center/100% $img-likbez-courses;
+        min-width: 600px;
+        height: 400px;
+      }
+    }
+  }
+}

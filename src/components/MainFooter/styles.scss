@@ -1,0 +1,30 @@
+@import '~Styles/variables';
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 'left center right';
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: $grey-blue;
+  &__left {
+    grid-area: left;
+    display: flex;
+    align-items: center;
+    &__title {
+      margin-left: 20px;
+    }
+  }
+  &__center {
+    grid-area: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__right {
+    grid-area: right;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
