@@ -64,7 +64,27 @@
     }
   }
 }
-
+.empty {
+  border: 1px dashed $grey-blue;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  &__image{
+    background: no-repeat center/100% $img-likbez-logo;
+    width: 100px;
+    height: 100%;
+    float: left;
+  }
+  &__text {
+    color: $dark-blue;
+align-self: center;  }
+  a {
+    color: $green;
+    &:visited {
+      color: $accent-red
+    }
+  }
+}
 @media (max-width: 768px) {
   .container-master {
     flex-direction: column;

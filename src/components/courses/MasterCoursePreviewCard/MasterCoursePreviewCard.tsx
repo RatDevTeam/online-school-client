@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import './style.scss';
 import { Calendar, Group } from 'grommet-icons';
 import { useRoute } from 'react-router5';
@@ -31,7 +31,7 @@ const MasterCoursePreviewCard: React.FC<IMasterCoursePreviewCard> = ({
 							Старт курса
 						</div>
 						<div className="container-master__info__bottom__body">
-							<Calendar />
+							<Calendar color="#0B3954" />
 							<p>{convertDate(course.dateStart)}</p>
 						</div>
 					</div>
@@ -40,7 +40,7 @@ const MasterCoursePreviewCard: React.FC<IMasterCoursePreviewCard> = ({
 							Размер группы
 						</div>
 						<div className="container-master__info__bottom__body">
-							<Group />
+							<Group color="#0B3954" />
 							<p>30 человек</p>
 						</div>
 					</div>
