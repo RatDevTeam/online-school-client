@@ -11,7 +11,7 @@ const TeacherBlock: React.FC<ITeacherBlock> = ({ teacher }) => {
 	return (
 		<div className="container-teacher">
 			<img
-				className="avatar"
+				className="container-teacher__avatar"
 				src="//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80"
 				alt="Аватар"
 			/>
@@ -31,10 +31,10 @@ const TeacherBlock: React.FC<ITeacherBlock> = ({ teacher }) => {
 						window.open(`${teacher.vkUrl}`);
 					}}
 				>
-					<Chat />
-					<p className="container-teacher__info__link__text">
+					<Chat color="#087e8b" />
+					<div className="container-teacher__info__link__text">
 						Связаться с преподавателем
-					</p>
+					</div>
 				</div>
 			</div>
 		</div>

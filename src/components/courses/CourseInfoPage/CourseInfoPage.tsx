@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import './styles.scss';
 import { useRoute } from 'react-router5';
+import { Calendar, Money } from 'grommet-icons';
 import { Course } from '../../../schemas/course.schema';
 import NotFoundPage from '../../utils/NotFoundPage';
 import { Teacher } from '../../../schemas/teacher.schema';
 import TeacherBlock from '../TeacherBlock/TeacherBlock';
 import { inNotEmptyArray } from '../../../utils';
+import { convertDate } from '../../../utils';
 
 interface ICourseInfoPage {
 	courses: Course[];
@@ -42,19 +45,59 @@ const CourseInfoPage: React.FC<ICourseInfoPage> = ({
 	if (course && teachers) {
 		return (
 			<>
-				<h3>{course.title}</h3>
-				<div
-					className="ui-tag"
-					style={{ backgroundColor: course.subject.color }}
-				>
-					{course.subject.title}
+				<div className="course-info">
+					<div className="course-info__header">
+						<h1>Курс: {course.title}</h1>
+						<div
+							className="ui-tag tag"
+							style={{ backgroundColor: course.subject.color }}
+						>
+							{course.subject.title}
+						</div>
+					</div>
+					<div className="course-info__description">
+						<h2>Описание курса</h2>
+						<p>{course.description}</p>
+						<fieldset>
+							<legend>О курсе</legend>
+							<div className="course-info__description__content">
+								<div className="course-info__description__content__item">
+									<div className="course-info__description__content__item-title">
+										Старт курса
+									</div>
+									<div className="course-info__description__content__item-body">
+										<Calendar color="#0B3954" />
+										<p>{convertDate(course.dateStart)}</p>
+									</div>
+								</div>
+								<div className="course-info__description__content__item">
+									<div className="course-info__description__content__item-title">
+										Финиш курса
+									</div>
+									<div className="course-info__description__content__item-body">
+										<Calendar color="#0B3954" />
+										<p>{convertDate(course.dateFinish)}</p>
+									</div>
+								</div>
+								<div className="course-info__description__content__item">
+									<div className="course-info__description__content__item-title">
+										Стоимость
+									</div>
+									<div className="course-info__description__content__item-body">
+										<Money color="#0B3954" />
+										<p>{course.price ? course.price : 0} РУБ.</p>
+									</div>
+								</div>
+							</div>
+						</fieldset>
+					</div>
+					<div className="course-info__teachers">
+						<h2>Преподаватели</h2>
+						{teachers.map((teacher) => (
+							<TeacherBlock teacher={teacher} />
+						))}
+					</div>
 				</div>
-				<h4>Описание курса</h4>
-				<p>{course.description}</p>
-				<h4>Преподователи</h4>
-				{teachers.map((teacher) => (
-					<TeacherBlock teacher={teacher} />
-				))}
 			</>
 		);
 	}
