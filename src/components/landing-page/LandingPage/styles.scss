@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: repeat(4, auto);
-    padding: 0 7%;
+    padding: 0 100px;
     color: $dark-blue;
     > div {
       margin-top: 100px;
@@ -38,7 +38,7 @@
       button{
         background-color: $accent-red;
         color: $white;
-        padding: 0 5rem 0 5rem;
+        padding: 0 3em;
         text-align: center;
         font-size: 18px;
         font-weight: bold;
@@ -50,7 +50,6 @@
       background: no-repeat center/100% $img-likbez-main;
       display: flex;
       flex: 1;
-      min-width: 450px;
       min-height: 450px;
       height: 100%;
     }
@@ -97,8 +96,8 @@
             }
             ul {
               color: $grey-text;
-              margin: 0 0 0 10px;
-              padding: 0 0 0 10px;
+              margin-left: 10px;
+              padding-left: 10px;
             }
           }
         }
@@ -110,11 +109,11 @@
   &__free-webinar{
     grid-area: free-webinar;
     transform: translateZ(-1px);
-    background-image: url("/public/free-webinar.jpg");
-    margin-left: -10%;
-    margin-right: -10%;
+    background-image: $img-free-webinar;
+    margin-left: -100px;
+    margin-right: -100px;
     &__title{
-      h2{
+      h1{
         color: $white;
         font-size: 48px;
         margin-top: 100px;
@@ -127,12 +126,12 @@
       margin-bottom: 100px;
       &__left {
         background: rgba(255, 255, 255, 0.5);
-        padding: 3em 100px 3em 100px;
+        padding: 3em 100px;
 
         button {
           background-color: $accent-red;
           color: $white;
-          padding: 0 5rem 0 5rem;
+          padding: 0 3em;
           text-align: center;
           font-size: 18px;
           font-weight: bold;
@@ -152,7 +151,7 @@
         flex-direction: column;
         justify-content: center;
         margin-left: 40px;
-        h3 {
+        h1 {
           color: $white;
           font-size: 48px;
         }
@@ -186,8 +185,7 @@
     flex-direction: column;
 
     &__title {
-      margin-bottom: 30px;
-      h2 {
+      h1 {
         font-size: 48px;
         font-weight: bold;
         text-align: center;
@@ -210,12 +208,11 @@
         color: $dark-grey-text;
         font-weight: normal;
         font-size: 18px;
-        padding: 0 2em 0 2em ;
+        padding: 0 2em;
       }
       &__img {
         background: no-repeat center/100% $img-likbez-courses;
         flex: 1;
-        min-width: 450px;
         height: 100%;
         min-height: 450px;
       }
@@ -226,7 +223,7 @@
 @media (max-width: 1024px) {
   .landing {
     &__container {
-      padding: 0 2%;
+      padding: 0 20px;
     }
 
     &__title {
@@ -260,8 +257,8 @@
       }
     }
     &__free-webinar {
-      margin-left: -2%;
-      margin-right: -2%;
+      margin-left: -20px;
+      margin-right: -20px;
       &__body {
         flex-direction: column;
         &__right {
@@ -286,6 +283,40 @@
           margin: 0;
           justify-content: flex-start;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .landing {
+    &__title {
+      &__left {
+        button {
+          font-size: 14px;
+        }
+      }
+      &__img {
+        min-height: 300px;
+      }
+    }
+    &__free-webinar__body__left {
+      padding: 3em 10%;
+      button {
+        font-size: 14px;
+      }
+    }
+    &__how-to-study-body__img{
+      min-height: 300px;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .landing {
+    &__container {
+      h1 {
+        font-size: 32px;
       }
     }
   }
