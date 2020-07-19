@@ -1,3 +1,4 @@
+@import "~Styles/variables";
 .container-course-preview {
   &__image {
     display: flex;
@@ -6,9 +7,10 @@
     max-height: 250px;
     height: 250px;
     min-height: 250px;
-    background-color: blue;
     padding: 20px;
     box-sizing: border-box;
+    background: no-repeat $img-likbez-empty-courses; //по умолчанию фон, когда нет картинки
+    background-size: cover;
     &__tags {
       display: flex;
       flex-direction: row;
@@ -24,8 +26,14 @@
     background-color: #DADADA;
     height: 120px;
     padding: 20px;
+ p{
+   font-weight: bold;
+   color: $dark-blue;
+
+ }
     &__title {
       margin: 0;
+      color: $dark-blue;
     }
     &__bottom {
       display: flex;
