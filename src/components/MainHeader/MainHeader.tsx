@@ -5,11 +5,7 @@ import './style.scss';
  */
 const MainHeader: React.FC = () => (
 	<header className="header">
-		<div className="header__title" id="header">
-			<h2>
-				Лик<span className="header__title__color-text">Б</span>ез
-			</h2>
-		</div>
+		<div className="header__title" id="header" />
 	</header>
 );
 

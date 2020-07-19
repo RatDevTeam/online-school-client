@@ -1,3 +1,5 @@
+@import '~Styles/variables.scss';
+
 html,
 body {
   width: 100%;
@@ -56,8 +58,46 @@ button {
   white-space: nowrap;
   font-size: 16px;
   box-sizing: border-box;
-  color: white;
-}
+  color: $white;
+  &.primary {
+    background-color: $accent-red;
+    &:hover {
+      background-color: $dark-red;
+    }
+    &:focus { outline: none; }
+  }
+  &.secondary {
+    border: 2px solid $green;
+    color: $green;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+    &:focus { outline: none; }
+
+    &:hover {
+      color: $white !important;
+      background-color: transparent;
+      &:before {
+        left: 0;
+        right: auto;
+        width: 100%;
+      }
+    }
+   &:before {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 0;
+      z-index: -1;
+      content: '';
+      color: $white !important;
+      background: $green;
+      transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+    }
+  }
+  }
 
 @mixin calc($property, $expression) {
   #{$property}: -moz-calc(#{$expression});
