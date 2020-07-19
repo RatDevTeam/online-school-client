@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: repeat(4, auto);
-    padding: 0 7%;
+    padding: 0 100px;
     color: $dark-blue;
     > div {
       margin-top: 100px;
@@ -111,8 +111,8 @@
     grid-area: free-webinar;
     transform: translateZ(-1px);
     background-image: url("/public/free-webinar.jpg");
-    margin-left: -10%;
-    margin-right: -10%;
+    margin-left: -100px;
+    margin-right: -100px;
     &__title{
       h2{
         color: $white;
@@ -226,7 +226,7 @@
 @media (max-width: 1024px) {
   .landing {
     &__container {
-      padding: 0 2%;
+      padding: 0 20px;
     }
 
     &__title {
@@ -260,8 +260,8 @@
       }
     }
     &__free-webinar {
-      margin-left: -2%;
-      margin-right: -2%;
+      margin-left: -20px;
+      margin-right: -20px;
       &__body {
         flex-direction: column;
         &__right {
