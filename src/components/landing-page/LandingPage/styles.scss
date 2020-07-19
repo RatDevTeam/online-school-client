@@ -110,7 +110,7 @@
   &__free-webinar{
     grid-area: free-webinar;
     transform: translateZ(-1px);
-    background-image: url("/public/free-webinar.jpg");
+    background-image: $img-free-webinar;
     margin-left: -100px;
     margin-right: -100px;
     &__title{
