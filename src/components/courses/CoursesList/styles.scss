@@ -1,3 +1,32 @@
+@import "~Styles/variables";
+.courses {
+  padding: 0 6em 0 6em;
+  p, legend{
+    color: $dark-blue;
+    padding: 0 10px;
+  }
+  fieldset {
+    border: 1px solid $grey-blue;
+    padding: 30px;
+  }
+  &__select {
+    padding: 50px 0;
+  }
+  &__master {
+
+  }
+  &__special {
+    padding: 50px 0;
+  }
+h1 {
+    color: $dark-blue;
+    font-size: 36px;
+    line-height: 49px;
+    margin: 0;
+  }
+
+}
+
 .subjects {
   display: flex;
   flex-direction: row;
