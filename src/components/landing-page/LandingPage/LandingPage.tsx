@@ -79,9 +79,9 @@ const LandingPage: React.FC<ILandingPageProps> = () => {
 				</div>
 				<div className="landing__how-to-study">
 					<div className="landing__how-to-study__title">
-						<h2>
+						<h1>
 							Как проходят занятия<span>?</span>
-						</h2>
+						</h1>
 					</div>
 					<div className="landing__how-to-study-body">
 						<div className="landing__how-to-study-body__img" />
@@ -104,7 +104,7 @@ const LandingPage: React.FC<ILandingPageProps> = () => {
 				</div>
 				<div className="landing__free-webinar" id="following">
 					<div className="landing__free-webinar__title">
-						<h2>Посети первое занятие бесплатно</h2>
+						<h1>Посети первое занятие бесплатно</h1>
 					</div>
 					<div className="landing__free-webinar__body">
 						<div className="landing__free-webinar__body__left">
@@ -121,7 +121,7 @@ const LandingPage: React.FC<ILandingPageProps> = () => {
 							</button>
 						</div>
 						<div className="landing__free-webinar__body__right">
-							<h3>Тебе доступны курсы</h3>
+							<h1>Тебе доступны курсы</h1>
 							<ul>
 								<li>Английский язык. ЕГЭ</li>
 								<li>История. ЕГЭ</li>
