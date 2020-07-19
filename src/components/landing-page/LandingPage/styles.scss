@@ -3,18 +3,22 @@
   &__container {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 560px 1250px 740px 730px 570px;
-    padding: 0 6em 0 6em;
+    grid-template-rows: repeat(4, auto);
+    padding: 0 7%;
+    color: $dark-blue;
+    > div {
+      margin-top: 100px;
+    }
     grid-template-areas:
     "landing-title"
     "advantages"
     "how-to-study"
     "free-webinar"
     "feedback-carousel"
+
   }
   &__title {
     grid-area: landing-title;
-    background-color: $white;
     display: flex;
     &__left {
       display: flex;
@@ -23,10 +27,10 @@
       justify-content: center;
 
       h2{
-        color: $dark-blue;
         font-size: 36px;
         line-height: 49px;
         margin: 0;
+        max-width: 340px;
       }
       p{
         color: $grey-text;
@@ -42,47 +46,90 @@
         width: 20em;
       }
     }
+    &__img {
+      background: no-repeat center/100% $img-likbez-main;
+      display: flex;
+      flex: 1;
+      min-width: 450px;
+      min-height: 450px;
+      height: 100%;
+    }
   }
+
+  &__advantages {
+    grid-area: advantages;
+    display: flex;
+    flex-direction: column;
+    &__title {
+      text-align: center;
+      font-size: 48px;
+      span {
+        color: $saturated-red;
+      }
+    }
+    &__body {
+      display: flex;
+      width: 100%;
+      &__box {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        &.right {
+          justify-content: center;
+          margin-left: 40px;
+        }
+        &__el {
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          margin-bottom: 40px;
+          &__img {
+            background: no-repeat center/100% $img-tick;
+            min-width: 50px;
+            height: 50px;
+            margin: 10px 10px 0 0;
+          }
+          &__text {
+            display: flex;
+            flex-direction: column;
+            span {
+              color: $saturated-red;
+            }
+            ul {
+              color: $grey-text;
+              margin: 0 0 0 10px;
+              padding: 0 0 0 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
   &__free-webinar{
     grid-area: free-webinar;
-    perspective: 1px;
-    height: 80vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-
-    &__parallax {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    }
-
-    &-back{
-      border: #979797;
-      transform: translateZ(-1px);
-      background-image: url("/public/free-webinar.jpg");
-      background-size: auto;
-    }
-    &-front {
-      transform: translateZ(0);
-    }
-
+    transform: translateZ(-1px);
+    background-image: url("/public/free-webinar.jpg");
+    margin-left: -10%;
+    margin-right: -10%;
     &__title{
       h2{
         color: $white;
         font-size: 48px;
-        padding-top: 100px;
+        margin-top: 100px;
         text-align: center;
       }
     }
-    &__body{
+    &__body {
       display: flex;
       flex-direction: row;
-      &__left{
+      margin-bottom: 100px;
+      &__left {
         background: rgba(255, 255, 255, 0.5);
-        padding: 6em 100px 3em 100px;
-        button{
+        padding: 3em 100px 3em 100px;
+
+        button {
           background-color: $accent-red;
           color: $white;
           padding: 0 5rem 0 5rem;
@@ -92,35 +139,46 @@
           height: 50px;
           width: 15em;
         }
-      p{
-        color: $dark-blue;
-        font-weight: bold;
-        font-size: 24px;
-      }}
+
+        p {
+          color: $dark-blue;
+          font-weight: bold;
+          font-size: 24px;
+        }
+      }
+
       &__right {
         display: flex;
         flex-direction: column;
         justify-content: center;
-
-        h3{
+        margin-left: 40px;
+        h3 {
           color: $white;
           font-size: 48px;
-          text-align: center;
         }
-        li{
+        ul {
+          margin-left: 10px;
+          padding-left: 10px;
+        }
+        li {
           list-style-type: none;
-color: $white;
+          color: $white;
           font-weight: bold;
+          font-size: 24px;
         }
+
         li:before {
           content: '►';
-          margin-left: -20px; margin-right: 10px;
+          margin-left: -20px;
+          margin-right: 10px;
           color: $accent-red;
         }
 
       }
+    }
   }
-  }
+
+
   &__how-to-study {
     grid-area: how-to-study;
     background-color: $white;
@@ -128,9 +186,8 @@ color: $white;
     flex-direction: column;
 
     &__title {
+      margin-bottom: 30px;
       h2 {
-        color: $dark-blue;
-        padding-top: 100px;
         font-size: 48px;
         font-weight: bold;
         text-align: center;
@@ -145,7 +202,11 @@ color: $white;
       display: flex;
       flex-direction: row;
       align-items: center;
-      p{
+      &__text {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        max-width: 500px;
         color: $dark-grey-text;
         font-weight: normal;
         font-size: 18px;
@@ -153,8 +214,78 @@ color: $white;
       }
       &__img {
         background: no-repeat center/100% $img-likbez-courses;
-        min-width: 600px;
-        height: 400px;
+        flex: 1;
+        min-width: 450px;
+        height: 100%;
+        min-height: 450px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .landing {
+    &__container {
+      padding: 0 2%;
+    }
+
+    &__title {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 70px;
+
+      &__left {
+        align-items: center;
+
+        h2 {
+          max-width: 100%;
+        }
+      }
+
+      &__img {
+        width: 100%;
+        max-width: 600px;
+      }
+    }
+
+    &__how-to-study-body {
+      flex-direction: column;
+      &__img {
+        max-width: 600px;
+        width: 100%;
+      }
+      &__text {
+        width: 90%;
+        padding: 0;
+      }
+    }
+    &__free-webinar {
+      margin-left: -2%;
+      margin-right: -2%;
+      &__body {
+        flex-direction: column;
+        &__right {
+          align-self: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .landing {
+    &__title__left {
+    }
+    h2 {
+      max-width: 340px;
+    }
+    &__advantages__body {
+      flex-direction: column;
+      &__box {
+        &.right {
+          margin: 0;
+          justify-content: flex-start;
+        }
       }
     }
   }
