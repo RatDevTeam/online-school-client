@@ -37,7 +37,7 @@ const LandingPage: React.FC<ILandingPageProps> = () => {
 							{advantages.left.map(
 								(a: { id: number, title: string, list: string[] }) => (
 									<div className="landing__advantages__body__box__el">
-										<div className="landing__advantages__body__box__el__img"></div>
+										<div className="landing__advantages__body__box__el__img" />
 										<div className="landing__advantages__body__box__el__text">
 											<h2>
 												<span>Без</span> {a.title}

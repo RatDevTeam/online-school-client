@@ -1,14 +1,15 @@
 import React, { lazy, Suspense } from 'react';
 import './styles.scss';
-
 import { useRouteNode } from 'react-router5';
+import NotFoundPage from './components/utils/NotFoundPage';
+
+import MainHeader from './components/MainHeader/MainHeader';
+import MainFooter from './components/MainFooter/MainFooter';
+
 const LandingPage = lazy(() =>
 	import('./components/landing-page/LandingPage/LandingPage')
 );
-import NotFoundPage from './components/utils/NotFoundPage';
 const CoursePage = lazy(() => import('./containers/CoursePage'));
-import MainHeader from './components/MainHeader/MainHeader';
-import MainFooter from './components/MainFooter/MainFooter';
 const StudentPage = lazy(() =>
 	import('./components/student-account/StudentPage/StudentPage')
 );
