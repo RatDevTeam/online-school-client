@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import './styles.scss';
-
 import { useRouteNode } from 'react-router5';
-import LandingPage from './components/landing-page/LandingPage/LandingPage';
 import NotFoundPage from './components/utils/NotFoundPage';
-import CoursePage from './containers/CoursePage';
+
 import MainHeader from './components/MainHeader/MainHeader';
 import MainFooter from './components/MainFooter/MainFooter';
-import StudentPage from './components/student-account/StudentPage/StudentPage';
+
+const LandingPage = lazy(() =>
+	import('./components/landing-page/LandingPage/LandingPage')
+);
+const CoursePage = lazy(() => import('./containers/CoursePage'));
+const StudentPage = lazy(() =>
+	import('./components/student-account/StudentPage/StudentPage')
+);
 
 const App: React.FC = () => {
 	const { route } = useRouteNode('');
@@ -29,7 +34,9 @@ const App: React.FC = () => {
 	return (
 		<>
 			<MainHeader />
-			<div className="main-block">{routing()}</div>
+			<div className="main-block">
+				<Suspense fallback={<div>Загрузка...</div>}>{routing()}</Suspense>
+			</div>
 			<div style={{ flexShrink: 0 }}>
 				<MainFooter />
 			</div>
