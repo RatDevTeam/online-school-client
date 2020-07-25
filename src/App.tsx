@@ -8,6 +8,7 @@ import CoursePage from './containers/CoursePage';
 import MainHeader from './components/MainHeader/MainHeader';
 import MainFooter from './components/MainFooter/MainFooter';
 import StudentPage from './components/student-account/StudentPage/StudentPage';
+import AdminPage from './components/Admin/AdminPage';
 
 const App: React.FC = () => {
 	const { route } = useRouteNode('');
@@ -22,6 +23,9 @@ const App: React.FC = () => {
 		}
 		if (topRouteName === 'student') {
 			return <StudentPage />;
+		}
+		if (topRouteName === 'admin') {
+			return <AdminPage />;
 		}
 		return <NotFoundPage />;
 	};

@@ -1,5 +1,6 @@
 export default [
 	{ name: 'home', path: '/home' },
+	{ name: 'admin', path: '/admin' },
 	{ name: 'login', path: '/login' },
 	{ name: 'registration', path: '/registration' },
 	{
