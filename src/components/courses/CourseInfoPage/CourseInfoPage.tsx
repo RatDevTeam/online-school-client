@@ -34,7 +34,7 @@ const CourseInfoPage: React.FC<ICourseInfoPage> = ({
 	}, [courses]);
 
 	useEffect(() => {
-		if (course) {
+		if (course && course.teachers) {
 			getTeachers(course.teachers);
 		}
 	}, [course]);
@@ -51,10 +51,16 @@ const CourseInfoPage: React.FC<ICourseInfoPage> = ({
 				</div>
 				<h4>Описание курса</h4>
 				<p>{course.description}</p>
-				<h4>Преподователи</h4>
-				{teachers.map((teacher) => (
-					<TeacherBlock teacher={teacher} />
-				))}
+				{course.teachers ? (
+					<>
+						<h4>Преподователи</h4>
+						{teachers.map((teacher) => (
+							<TeacherBlock teacher={teacher} />
+						))}
+					</>
+				) : (
+					<h4>Информация о препдователях отсутсвует</h4>
+				)}
 			</>
 		);
 	}
