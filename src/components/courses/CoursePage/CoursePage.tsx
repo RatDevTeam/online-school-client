@@ -9,7 +9,7 @@ import { Teacher } from '../../../schemas/teacher.schema';
 interface ICoursePage {
 	courses: Course[];
 	specialCourses: Course[];
-	masterCourse: Course | undefined;
+	masterCourses: Course[];
 	loadingCourses: boolean;
 	subjects: Subject[];
 	teachers: Teacher[];
@@ -21,7 +21,7 @@ interface ICoursePage {
 const CoursePage: React.FC<ICoursePage> = ({
 	courses,
 	specialCourses,
-	masterCourse,
+	masterCourses,
 	loadingCourses,
 	subjects,
 	teachers,
@@ -48,7 +48,7 @@ const CoursePage: React.FC<ICoursePage> = ({
 	return (
 		<CoursesList
 			specialCourses={specialCourses}
-			masterCourse={masterCourse}
+			masterCourses={masterCourses}
 			loadingCourses={loadingCourses}
 			subjects={subjects}
 		/>
