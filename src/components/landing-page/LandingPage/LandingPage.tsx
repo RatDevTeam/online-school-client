@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
-import Feedback from '../FeedbackCarousel';
 import advantages from '../../../utils/advantages';
 
 import './styles.scss';
@@ -10,7 +9,7 @@ interface ILandingPageProps {}
 const LandingPage: React.FC<ILandingPageProps> = () => {
 	useEffect(() => {
 		AOS.init({
-			delay: 300,
+			delay: 500,
 		});
 	});
 	return (
@@ -24,7 +23,12 @@ const LandingPage: React.FC<ILandingPageProps> = () => {
 							<br /> чтобы ты максимально эффективно
 							<br /> подготовился к экзамену
 						</p>
-						<button type="button">Я сдам на 100!</button>
+						<button
+							type="button"
+							onClick={() => (location.href = '#following')}
+						>
+							Я сдам на 100!
+						</button>
 					</div>
 					<div className="landing__title__img" data-aos="fade-left" />
 				</div>
@@ -73,15 +77,11 @@ const LandingPage: React.FC<ILandingPageProps> = () => {
 						</div>
 					</div>
 				</div>
-				<div
-					className="landing__how-to-study"
-					data-aos="fade-up"
-					data-aos-duration="500"
-				>
+				<div className="landing__how-to-study">
 					<div className="landing__how-to-study__title">
-						<h2>
+						<h1>
 							Как проходят занятия<span>?</span>
-						</h2>
+						</h1>
 					</div>
 					<div className="landing__how-to-study-body">
 						<div className="landing__how-to-study-body__img" />
@@ -102,9 +102,9 @@ const LandingPage: React.FC<ILandingPageProps> = () => {
 						</div>
 					</div>
 				</div>
-				<div className="landing__free-webinar">
+				<div className="landing__free-webinar" id="following">
 					<div className="landing__free-webinar__title">
-						<h2>Посети первое занятие бесплатно</h2>
+						<h1>Посети первое занятие бесплатно</h1>
 					</div>
 					<div className="landing__free-webinar__body">
 						<div className="landing__free-webinar__body__left">
@@ -113,10 +113,15 @@ const LandingPage: React.FC<ILandingPageProps> = () => {
 								<br />и получи приглашение на первое занятие. <br /> Пора
 								готовиться!
 							</p>
-							<button type="button">Подписаться</button>
+							<button
+								type="button"
+								onClick={() => window.open('http://vk.com')}
+							>
+								Подписаться
+							</button>
 						</div>
 						<div className="landing__free-webinar__body__right">
-							<h3>Тебе доступны курсы</h3>
+							<h1>Тебе доступны курсы</h1>
 							<ul>
 								<li>Английский язык. ЕГЭ</li>
 								<li>История. ЕГЭ</li>

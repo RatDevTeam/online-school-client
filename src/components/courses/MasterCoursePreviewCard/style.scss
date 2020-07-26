@@ -1,3 +1,5 @@
+@import "~Styles/variables";
+
 .container-master {
   display: flex;
   flex-direction: row;
@@ -6,7 +8,8 @@
   min-height: 200px;
   &__image {
     flex: 1;
-    background-color: crimson;
+    background: no-repeat $img-likbez-empty-courses; //по умолчанию фон, когда нет картинки
+    background-size: cover;
   }
   &__info {
     flex: 3;
@@ -14,27 +17,74 @@
     flex-direction: column;
     padding: 20px;
     justify-content: space-between;
-    background-color: #DADADA;
+    background-color: rgba(193, 207, 218, 0.2);
+
     &__title {
-      margin-top: 0;
+      margin: 32px 0 0 0;
+      color: $dark-blue;
+    }
+    &__body{
+      margin: 16px 0;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      max-height: 66px;
+      color: $dark-grey-text;
     }
     &__bottom {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      margin-top: 32px;
+
       &__element {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+        margin-right: auto;
+
+        &.price {
+           margin-left: auto;
+          margin-right: 0;
+         }
+
+        p {
+          font-weight: bold;
+        }
         svg {
           margin-right: 10px;
         }
       }
+      &__title {
+         color: $grey-text;
+         font-size: 12px;
+       }
+      &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
     }
   }
 }
-
+.empty {
+  border: 1px dashed $grey-blue;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  &__image{
+    background: no-repeat center/100% $img-likbez-logo;
+    width: 100px;
+    height: 100%;
+    float: left;
+  }
+  &__text {
+    color: $dark-blue;
+align-self: center;  }
+  a {
+    color: $green;
+    &:visited {
+      color: $accent-red
+    }
+  }
+}
 @media (max-width: 768px) {
   .container-master {
     flex-direction: column;
