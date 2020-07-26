@@ -17,12 +17,12 @@ const getSpecialCourse = (courses: Course[]) => {
 };
 
 const mapStateToProps = (state: AppState) => ({
-	courses: state.courseReducers.courses,
-	specialCourses: getSpecialCourse(state.courseReducers.courses),
-	masterCourse: getMasterCourse(state.courseReducers.courses),
+	courses: state.courseReducers.value,
+	specialCourses: getSpecialCourse(state.courseReducers.value),
+	masterCourse: getMasterCourse(state.courseReducers.value),
 	loadingCourses: state.courseReducers.loading,
-	subjects: state.subjectReducers.subjects,
-	teachers: state.teacherReducers.teachers,
+	subjects: state.subjectReducers.value,
+	teachers: state.teacherReducers.value,
 });
 
 const mapDispatchToProps = (
