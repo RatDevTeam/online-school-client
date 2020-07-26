@@ -9,17 +9,16 @@ import { Course, CourseTypes } from '../schemas/course.schema';
 import CoursePage from '../components/courses/CoursePage/CoursePage';
 import { getTeachersByIds } from '../redux/actions/teacher.action';
 
-const getMasterCourse = (courses: Course[]) =>
-	courses.find((course) => course.type === CourseTypes.MASTER);
+const getMasterCourses = (courses: Course[]): Course[] =>
+	courses.filter((course) => course.type === CourseTypes.MASTER);
 
-const getSpecialCourse = (courses: Course[]) => {
-	return courses.filter((course) => course.type !== CourseTypes.MASTER);
-};
+const getSpecialCourse = (courses: Course[]): Course[] =>
+	courses.filter((course) => course.type !== CourseTypes.MASTER);
 
 const mapStateToProps = (state: AppState) => ({
 	courses: state.courseReducers.courses,
 	specialCourses: getSpecialCourse(state.courseReducers.courses),
-	masterCourse: getMasterCourse(state.courseReducers.courses),
+	masterCourses: getMasterCourses(state.courseReducers.courses),
 	loadingCourses: state.courseReducers.loading,
 	subjects: state.subjectReducers.subjects,
 	teachers: state.teacherReducers.teachers,
