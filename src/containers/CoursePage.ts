@@ -18,7 +18,7 @@ const getSpecialCourse = (courses: Course[]): Course[] =>
 const mapStateToProps = (state: AppState) => ({
 	courses: state.courseReducers.value,
 	specialCourses: getSpecialCourse(state.courseReducers.value),
-	masterCourses: getMasterCourse(state.courseReducers.value),
+	masterCourses: getMasterCourses(state.courseReducers.value),
 	loadingCourses: state.courseReducers.loading,
 	subjects: state.subjectReducers.value,
 	teachers: state.teacherReducers.value,
