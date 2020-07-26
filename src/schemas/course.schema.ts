@@ -1,8 +1,10 @@
 import { Subject } from './subject.schema';
-import { Reducer } from './reducer.schema';
 
-export interface ICourseReducer extends Reducer<Course[]> {
+export interface ICourseReducer {
+	loading: boolean;
+	courses: Course[];
 	message: string | null;
+	err: any;
 }
 
 export class Course implements ICourse {

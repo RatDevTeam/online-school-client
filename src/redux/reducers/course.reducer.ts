@@ -4,7 +4,7 @@ import { CourseActions } from '../actions/course.action';
 
 const initialState: ICourseReducer = {
 	loading: false,
-	value: [],
+	courses: [],
 	message: null,
 	err: null,
 };
@@ -19,32 +19,32 @@ export default (
 		case CourseActions.COURSE_ERR:
 			return { ...state, err: action.payload, loading: false };
 		case CourseActions.COURSE_SUCCESS:
-			return { ...state, loading: false, value: action.payload };
+			return { ...state, loading: false, courses: action.payload };
 		case CourseActions.COURSE_ADD:
 		case CourseActions.COURSE_UPDATE: {
-			const newCoursesId = state.value.findIndex(
+			const newCoursesId = state.courses.findIndex(
 				(course) => course._id === action.payload._id
 			);
 			return {
 				...state,
 				loading: false,
-				value: [
-					...state.value.slice(0, newCoursesId),
+				courses: [
+					...state.courses.slice(0, newCoursesId),
 					action.payload,
-					...state.value.slice(newCoursesId + 1),
+					...state.courses.slice(newCoursesId + 1),
 				],
 			};
 		}
 		case CourseActions.COURSE_DELETE: {
-			const deleteCourse = state.value.findIndex(
+			const deleteCourse = state.courses.findIndex(
 				(course) => course._id === action.id
 			);
 			return {
 				...state,
 				loading: false,
-				value: [
-					...state.value.slice(0, deleteCourse),
-					...state.value.slice(deleteCourse + 1),
+				courses: [
+					...state.courses.slice(0, deleteCourse),
+					...state.courses.slice(deleteCourse + 1),
 				],
 			};
 		}
