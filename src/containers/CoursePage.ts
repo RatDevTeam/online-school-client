@@ -16,12 +16,12 @@ const getSpecialCourse = (courses: Course[]): Course[] =>
 	courses.filter((course) => course.type !== CourseTypes.MASTER);
 
 const mapStateToProps = (state: AppState) => ({
-	courses: state.courseReducers.value,
-	specialCourses: getSpecialCourse(state.courseReducers.value),
-	masterCourses: getMasterCourses(state.courseReducers.value),
+	courses: state.courseReducers.courses,
+	specialCourses: getSpecialCourse(state.courseReducers.courses),
+	masterCourses: getMasterCourses(state.courseReducers.courses),
 	loadingCourses: state.courseReducers.loading,
-	subjects: state.subjectReducers.value,
-	teachers: state.teacherReducers.value,
+	subjects: state.subjectReducers.subjects,
+	teachers: state.teacherReducers.teachers,
 });
 
 const mapDispatchToProps = (

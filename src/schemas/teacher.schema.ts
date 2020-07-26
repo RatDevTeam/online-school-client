@@ -1,6 +1,8 @@
-import { Reducer } from './reducer.schema';
-
-export interface TeacherReducer extends Reducer<Teacher[]> {}
+export interface TeacherReducer {
+	loading: boolean;
+	teachers: Teacher[];
+	err: any;
+}
 
 export class Teacher implements ITeacher {
 	name: string;

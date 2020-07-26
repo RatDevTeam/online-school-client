@@ -4,7 +4,7 @@ import { TeacherActions } from '../actions/teacher.action';
 
 const initialState: TeacherReducer = {
 	loading: false,
-	value: [],
+	teachers: [],
 	err: null,
 };
 
@@ -19,7 +19,7 @@ export default (
 				loading: true,
 			};
 		case TeacherActions.TEACHER_SUCCESS:
-			return { ...state, loading: false, value: action.payload };
+			return { ...state, loading: false, teachers: action.payload };
 		case TeacherActions.TEACHER_ERR:
 			return { ...state, err: action.payload };
 		default:
