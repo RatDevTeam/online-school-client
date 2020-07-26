@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import './styles.scss';
 import { useRoute } from 'react-router5';
 import { Calendar, Money } from 'grommet-icons';
 import { Course } from '../../../schemas/course.schema';
 import NotFoundPage from '../../utils/NotFoundPage';
 import { Teacher } from '../../../schemas/teacher.schema';
 import TeacherBlock from '../TeacherBlock/TeacherBlock';
-import { inNotEmptyArray } from '../../../utils';
-import { convertDate } from '../../../utils';
+import { inNotEmptyArray, convertDate } from '../../../utils';
 
 interface ICourseInfoPage {
 	courses: Course[];
@@ -37,7 +35,7 @@ const CourseInfoPage: React.FC<ICourseInfoPage> = ({
 	}, [courses]);
 
 	useEffect(() => {
-		if (course) {
+		if (course && course.teachers) {
 			getTeachers(course.teachers);
 		}
 	}, [course]);
@@ -92,10 +90,16 @@ const CourseInfoPage: React.FC<ICourseInfoPage> = ({
 						</fieldset>
 					</div>
 					<div className="course-info__teachers">
-						<h2>Преподаватели</h2>
-						{teachers.map((teacher) => (
-							<TeacherBlock teacher={teacher} />
-						))}
+						{course.teachers ? (
+							<>
+								<h2>Преподаватели</h2>
+								{teachers.map((teacher) => (
+									<TeacherBlock teacher={teacher} />
+								))}
+							</>
+						) : (
+							<h4>Информация о преподавателях отсутсвует</h4>
+						)}
 					</div>
 				</div>
 			</>
