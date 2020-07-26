@@ -7,6 +7,6 @@ export type AppState = ReturnType<typeof rootReducer>;
 
 export const Store = createStore(
   rootReducer,
-  // eslint-disable-next-line prettier/prettier
-  applyMiddleware(thunk as ThunkMiddleware<AppState, AppActionType>),
+	// eslint-disable-next-line prettier/prettier
+	applyMiddleware(thunk as ThunkMiddleware<AppState, AppActionType>),
 );
