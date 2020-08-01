@@ -21,7 +21,7 @@ const LandingPage: React.FC<ILandingPageProps> = () => {
 						<p>
 							Преподаватели и тьюторы ЛикБез нацелены на то,
 							<br /> чтобы ты максимально эффективно
-							<br /> подготовился к экзамену
+							<br /> подготовился к экзаменам
 						</p>
 						<button
 							type="button"
@@ -60,15 +60,15 @@ const LandingPage: React.FC<ILandingPageProps> = () => {
 						</div>
 						<div className="landing__advantages__body__box right">
 							{advantages.right.map(
-								(a: { id: number, title: string, list: string[] }) => (
+								(advantage: { id: number, title: string, list: string[] }) => (
 									<div className="landing__advantages__body__box__el">
 										<div className="landing__advantages__body__box__el__img" />
 										<div className="landing__advantages__body__box__el__text">
 											<h2>
-												<span>Без</span> {a.title}
+												<span>Без</span> {advantage.title}
 											</h2>
 											<ul>
-												{a.list.map((l: string) => (
+												{advantage.list.map((l: string) => (
 													<li>{l}</li>
 												))}
 											</ul>
@@ -93,13 +93,9 @@ const LandingPage: React.FC<ILandingPageProps> = () => {
 								было проще вести конспект, а информация лучше усваивалась.
 							</p>
 							<p>
-								Длительность: от часа до полутора часов (в зависимости от темы).
-								Начало всегда по московскому времени. Но не переживай, если ты
-								не успел посетить занятие: мы всегда сохраняем видеозапись.
-							</p>
-							<p>
-								Личный тьютор будет помогать тебе, а преподаватель ответит на
-								вопросы
+								Длительность: от 1 часа до 1,5 часов (в зависимости от темы).
+								Начало вебинаров по московскому времени. Не переживай, если ты
+								не успел посетить занятие - мы всегда сохраняем видеозапись
 							</p>
 						</div>
 					</div>
