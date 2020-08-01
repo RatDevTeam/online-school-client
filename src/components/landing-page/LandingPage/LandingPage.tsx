@@ -25,7 +25,9 @@ const LandingPage: React.FC<ILandingPageProps> = () => {
 						</p>
 						<button
 							type="button"
-							onClick={() => (location.href = '#following')}
+							onClick={() => {
+								window.location.href = '#following';
+							}}
 						>
 							Я сдам на 100!
 						</button>
