@@ -1,2 +1,2 @@
 ## online-school
-https://online-school.ru
+https://likbez-school.ru
