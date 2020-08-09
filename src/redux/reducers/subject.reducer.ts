@@ -4,7 +4,7 @@ import { SubjectActions } from '../actions/subject.action';
 
 const initialState: SubjectReducer = {
 	loading: false,
-	subjects: [],
+	value: [],
 	err: null,
 };
 
@@ -19,7 +19,7 @@ export default (
 				loading: true,
 			};
 		case SubjectActions.SUBJECT_SUCCESS:
-			return { ...state, loading: false, subjects: action.payload };
+			return { ...state, loading: false, value: action.payload };
 		case SubjectActions.SUBJECT_ERR:
 			return { ...state, err: action.payload };
 		default:

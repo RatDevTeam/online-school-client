@@ -1,8 +1,6 @@
-export interface SubjectReducer {
-	loading: boolean;
-	subjects: Subject[];
-	err: any;
-}
+import { Reducer } from './reducer.schema';
+
+export interface SubjectReducer extends Reducer<Subject[]> {}
 
 export class Subject implements ISubject {
 	_id: string;

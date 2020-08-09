@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
@@ -62,6 +63,14 @@ module.exports = {
 		}),
 		new webpack.DefinePlugin({
 			'process.env.NODE_ENV': JSON.stringify('production'),
+		}),
+		new CopyPlugin({
+			patterns: [
+				{
+					from: path.resolve(__dirname, 'public/static'),
+					to: path.resolve(__dirname, './docs'),
+				},
+			],
 		}),
 	],
 };

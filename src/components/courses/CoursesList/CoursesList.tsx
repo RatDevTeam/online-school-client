@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './styles.scss';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRoute } from 'react-router5';
 import MasterCoursePreviewCard from '../MasterCoursePreviewCard/MasterCoursePreviewCard';
 import EmptyMasterCoursePreviewCard from '../MasterCoursePreviewCard/EmptyMasterCoursePreviewCard';
@@ -10,18 +10,22 @@ import { Subject } from '../../../schemas/subject.schema';
 
 interface ISubjectsPage {
 	specialCourses: Course[];
-	masterCourse: Course | undefined;
+	masterCourses: Course[] | undefined;
 	loadingCourses: boolean;
 	subjects: Subject[];
 }
 
 const subjectsPage: React.FC<ISubjectsPage> = ({
-	masterCourse,
+	masterCourses,
 	specialCourses,
 	loadingCourses,
 	subjects,
 }) => {
 	const [currentSubject, setCurrentSubject] = useState<string | null>(null);
+	const [masterCourse, setMasterCourse] = useState<Course | undefined>(
+		undefined
+	);
+
 	const { router } = useRoute();
 
 	const getColorSubject = (type: string, color: string): string => {
@@ -49,6 +53,22 @@ const subjectsPage: React.FC<ISubjectsPage> = ({
 			return specialCourses;
 		}
 		return [];
+	};
+
+	useEffect(() => {
+		getMasterCourse();
+	}, [currentSubject]);
+
+	const getMasterCourse = () => {
+		if (masterCourses) {
+			if (currentSubject) {
+				setMasterCourse(
+					masterCourses.find((c) => c.subject.type === currentSubject)
+				);
+				return;
+			}
+		}
+		setMasterCourse(undefined);
 	};
 
 	return !loadingCourses ? (
