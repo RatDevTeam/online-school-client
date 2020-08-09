@@ -56,7 +56,6 @@ const subjectsPage: React.FC<ISubjectsPage> = ({
 	};
 
 	useEffect(() => {
-		console.log(masterCourses);
 		getMasterCourse();
 	}, [currentSubject]);
 

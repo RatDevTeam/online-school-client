@@ -1,7 +1,7 @@
 import * as React from 'react';
+import { useRoute } from 'react-router5';
 import './styles.scss';
 import TopNavigation from '../../TopNavigator/TopNavigation';
-import { useRoute } from 'react-router5';
 import NotFoundPage from '../../utils/NotFoundPage';
 import StudentCourses from '../StudentCourses/StudentCourses';
 import StudentScripts from '../StudentScripts/StudentScripts';

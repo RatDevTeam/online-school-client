@@ -47,7 +47,8 @@
         "react-svg/no-unused-ids-in-svg": 2,
         "react-svg/no-unused-empty-tag-in-svg": 2,
         "react-svg/no-metadata-in-svg": 2,
-        "jsx-a11y/anchor-is-valid": 0
+        "jsx-a11y/anchor-is-valid": 0,
+        "no-use-before-define": "off"
     },
     "overrides": [
         {
