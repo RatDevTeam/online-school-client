@@ -1,0 +1,288 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`корректно рендерит лендинг ликбез 1`] = `
+<div
+  className="landing__container"
+>
+  <div
+    className="landing__title"
+  >
+    <div
+      className="landing__title__left"
+      data-aos="fade-right"
+    >
+      <h2>
+         Подготовка к ЕГЭ в онлайн формате
+      </h2>
+      <p>
+        Преподаватели и тьюторы ЛикБез нацелены на то,
+        <br />
+         чтобы ты максимально эффективно
+        <br />
+         подготовился к экзамену
+      </p>
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Я сдам на 100!
+      </button>
+    </div>
+    <div
+      className="landing__title__img"
+      data-aos="fade-left"
+    />
+  </div>
+  <div
+    className="landing__advantages"
+  >
+    <h1
+      className="landing__advantages__title"
+    >
+      Подготовим к 
+      <span>
+        ЕГЭ
+      </span>
+    </h1>
+    <div
+      className="landing__advantages__body"
+    >
+      <div
+        className="landing__advantages__body__box"
+      >
+        <div
+          className="landing__advantages__body__box__el"
+        >
+          <div
+            className="landing__advantages__body__box__el__img"
+          />
+          <div
+            className="landing__advantages__body__box__el__text"
+          >
+            <h2>
+              <span>
+                Без
+              </span>
+               
+              воды и лишней информации
+            </h2>
+            <ul>
+              <li>
+                Материал на вебинарах четкий и конкретный
+              </li>
+              <li>
+                Только то, что поможет сдать ЕГЭ на 100 баллов
+              </li>
+              <li>
+                Больше повторения (лучше повторять, чем учить то, что на ЕГЭ никогда не попадется)
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          className="landing__advantages__body__box__el"
+        >
+          <div
+            className="landing__advantages__body__box__el__img"
+          />
+          <div
+            className="landing__advantages__body__box__el__text"
+          >
+            <h2>
+              <span>
+                Без
+              </span>
+               
+              скучных лекций
+            </h2>
+            <ul>
+              <li>
+                На занятиях чередуется теория и практика
+              </li>
+              <li>
+                Лекции ведет заряженный на успех преподаватель, который поделиться с вами не только знаниями, но и жизненным опытом
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          className="landing__advantages__body__box__el"
+        >
+          <div
+            className="landing__advantages__body__box__el__img"
+          />
+          <div
+            className="landing__advantages__body__box__el__text"
+          >
+            <h2>
+              <span>
+                Без
+              </span>
+               
+              непонятных объяснений
+            </h2>
+            <ul>
+              <li>
+                Мы используем удобные скрипты, что вы не запутались в материале
+              </li>
+              <li>
+                Преподаватель ДОСТУПНЫМ языком объясняет материал НА ПАЛЬЦАХ
+              </li>
+              <li>
+                После занятия вы получаете итоговые конспекты, графические карты, интеллект-схемы для повторения
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        className="landing__advantages__body__box right"
+      >
+        <div
+          className="landing__advantages__body__box__el"
+        >
+          <div
+            className="landing__advantages__body__box__el__img"
+          />
+          <div
+            className="landing__advantages__body__box__el__text"
+          >
+            <h2>
+              <span>
+                Без
+              </span>
+               
+              пустых заданий
+            </h2>
+            <ul>
+              <li>
+                Преподаватель ДОСТУПНЫМ языком объясняет материал НА ПАЛЬЦАХ
+              </li>
+              <li>
+                Составляем тесты на основе рекомендованных ФИПИ сборников, а также Банка заданий ФИПИ
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          className="landing__advantages__body__box__el"
+        >
+          <div
+            className="landing__advantages__body__box__el__img"
+          />
+          <div
+            className="landing__advantages__body__box__el__text"
+          >
+            <h2>
+              <span>
+                Без
+              </span>
+               
+              возможности схалтурить
+            </h2>
+            <ul>
+              <li>
+                У вас есть персональный тьютор, который и пряником угостит, и «пинком» волшебным коли надо одарит
+              </li>
+              <li>
+                У вас есть система жизней, при потере которых вы можете вылететь из группы
+              </li>
+              <li>
+                У вас есть система бонусов, для усердных учеников предусмотрены бесплатные «плюшки» и скидки
+              </li>
+              <li>
+                Каждую неделю проводим коллоквиумы и 1 зачет в месяц – контроль качества знаний обеспечен
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="landing__how-to-study"
+  >
+    <div
+      className="landing__how-to-study__title"
+    >
+      <h1>
+        Как проходят занятия
+        <span>
+          ?
+        </span>
+      </h1>
+    </div>
+    <div
+      className="landing__how-to-study-body"
+    >
+      <div
+        className="landing__how-to-study-body__img"
+      />
+      <div
+        className="landing__how-to-study-body__text"
+      >
+        <p>
+          Занятия проходят онлайн. Для каждого занятия есть скрипт, чтобы было проще вести конспект, а информация лучше усваивалась.
+        </p>
+        <p>
+          Длительность: от часа до полутора часов (в зависимости от темы). Начало всегда по московскому времени. Но не переживай, если ты не успел посетить занятие: мы всегда сохраняем видеозапись.
+        </p>
+        <p>
+          Личный тьютор будет помогать тебе, а преподаватель ответит на вопросы
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="landing__free-webinar"
+    id="following"
+  >
+    <div
+      className="landing__free-webinar__title"
+    >
+      <h1>
+        Посети первое занятие бесплатно
+      </h1>
+    </div>
+    <div
+      className="landing__free-webinar__body"
+    >
+      <div
+        className="landing__free-webinar__body__left"
+      >
+        <p>
+          Подпишись на нас вКонтакте
+          <br />
+          и получи приглашение на первое занятие. 
+          <br />
+           Пора готовиться!
+        </p>
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          Подписаться
+        </button>
+      </div>
+      <div
+        className="landing__free-webinar__body__right"
+      >
+        <h1>
+          Тебе доступны курсы
+        </h1>
+        <ul>
+          <li>
+            Английский язык. ЕГЭ
+          </li>
+          <li>
+            История. ЕГЭ
+          </li>
+          <li>
+            Обществознание. ЕГЭ
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -40,15 +40,18 @@ const LandingPage: React.FC<ILandingPageProps> = () => {
 						<div className="landing__advantages__body__box">
 							{advantages.left.map(
 								(a: { id: number, title: string, list: string[] }) => (
-									<div className="landing__advantages__body__box__el">
+									<div
+										className="landing__advantages__body__box__el"
+										key={a.id}
+									>
 										<div className="landing__advantages__body__box__el__img"></div>
 										<div className="landing__advantages__body__box__el__text">
 											<h2>
 												<span>Без</span> {a.title}
 											</h2>
-											<ul>
+											<ul key={a.id}>
 												{a.list.map((l: string) => (
-													<li>{l}</li>
+													<li key={l}>{l}</li>
 												))}
 											</ul>
 										</div>
@@ -59,7 +62,10 @@ const LandingPage: React.FC<ILandingPageProps> = () => {
 						<div className="landing__advantages__body__box right">
 							{advantages.right.map(
 								(a: { id: number, title: string, list: string[] }) => (
-									<div className="landing__advantages__body__box__el">
+									<div
+										className="landing__advantages__body__box__el"
+										key={a.id}
+									>
 										<div className="landing__advantages__body__box__el__img" />
 										<div className="landing__advantages__body__box__el__text">
 											<h2>
@@ -67,7 +73,7 @@ const LandingPage: React.FC<ILandingPageProps> = () => {
 											</h2>
 											<ul>
 												{a.list.map((l: string) => (
-													<li>{l}</li>
+													<li key={l}>{l}</li>
 												))}
 											</ul>
 										</div>
