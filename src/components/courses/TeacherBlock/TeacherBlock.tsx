@@ -2,6 +2,8 @@ import React from 'react';
 import './styles.scss';
 import { Chat } from 'grommet-icons';
 import { Teacher } from '../../../schemas/teacher.schema';
+// @ts-ignore
+import img from '../../../../public/bg-courses.svg';
 
 interface ITeacherBlock {
 	teacher: Teacher;
@@ -12,8 +14,8 @@ const TeacherBlock: React.FC<ITeacherBlock> = ({ teacher }) => {
 		<div className="container-teacher">
 			<img
 				className="container-teacher__avatar"
-				src="//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80"
-				alt="Аватар"
+				src={teacher.imgUrl || img}
+				alt={teacher.name}
 			/>
 			<div className="container-teacher__info">
 				<h2>{teacher.name}</h2>

@@ -5,17 +5,16 @@
   max-width: 1200px;
   height: 200px;
   align-items: center;
+
   &__avatar {
-    width: auto;
-    height: 50%;
-    border-radius: 50%;
+    height: 500px;
   }
   &__info {
+    background-color: $grey-blue;
     display: flex;
     flex-direction: column;
     flex: 1;
     justify-content: space-between;
-    margin-left: 3rem;
     color: $dark-blue;
     p{
       margin: 0;

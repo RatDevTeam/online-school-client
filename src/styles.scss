@@ -10,6 +10,23 @@ body {
   scroll-behavior: smooth;
 }
 
+h1 {
+    color: $dark-blue;
+    font-size: 36px;
+    line-height: 49px;
+    margin: 0;
+}
+p {
+  color: $dark-blue;
+}
+
+h2 {
+  color: $dark-blue;
+}
+legend {
+  color: $dark-blue;
+  padding: 0 10px;
+}
 button {
   padding: 0;
   border: none;

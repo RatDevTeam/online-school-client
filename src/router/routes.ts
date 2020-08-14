@@ -19,4 +19,5 @@ export default [
 			{ name: 'home', path: '/home-work' },
 		],
 	},
+	{ name: 'tutors', path: '/tutors' },
 ];

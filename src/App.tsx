@@ -10,6 +10,7 @@ const LandingPage = lazy(() =>
 	import('./components/landing-page/LandingPage/LandingPage')
 );
 const CoursePage = lazy(() => import('./containers/CoursePage'));
+const TutorsPage = lazy(() => import('./containers/TutorsPage'));
 const StudentPage = lazy(() =>
 	import('./components/student-account/StudentPage/StudentPage')
 );
@@ -27,6 +28,9 @@ const App: React.FC = () => {
 		}
 		if (topRouteName === 'student') {
 			return <StudentPage />;
+		}
+		if (topRouteName === 'tutors') {
+			return <TutorsPage />;
 		}
 		return <NotFoundPage />;
 	};
