@@ -7,14 +7,14 @@
     padding: 0 100px;
     color: $dark-blue;
     > div {
-      margin-top: 100px;
+      margin: 50px 0;
     }
     grid-template-areas:
     "landing-title"
     "advantages"
     "how-to-study"
     "free-webinar"
-    "feedback-carousel"
+    "feedback"
 
   }
   &__title {
@@ -178,8 +178,6 @@
       }
     }
   }
-
-
   &__how-to-study {
     grid-area: how-to-study;
     background-color: $white;
@@ -219,6 +217,9 @@
         min-height: 450px;
       }
     }
+  }
+  &__feedback {
+    margin-top: 10px!important;
   }
 }
 
