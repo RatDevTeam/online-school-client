@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import FeedbackSlider from '../../Feedback/FeedbackSlider';
 import AOS from 'aos';
 import advantages from '../../../utils/advantages';
 
@@ -129,6 +130,9 @@ const LandingPage: React.FC<ILandingPageProps> = () => {
 							</ul>
 						</div>
 					</div>
+				</div>
+				<div className="landing__feedback">
+					<FeedbackSlider />
 				</div>
 			</div>
 		</>
