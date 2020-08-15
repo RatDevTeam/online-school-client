@@ -113,7 +113,9 @@ const LandingPage: React.FC<ILandingPageProps> = () => {
 							</p>
 							<button
 								type="button"
-								onClick={() => window.open('http://vk.com')}
+								onClick={() =>
+									window.open('https://www.instagram.com/likbez_online/')
+								}
 							>
 								Подписаться
 							</button>
