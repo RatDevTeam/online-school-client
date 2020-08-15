@@ -1,31 +1,37 @@
 @import "~Styles/variables";
 .TeacherContainer {
   display: flex;
-  max-width: 1000px;
-  min-width: 1000px;
   &__image {
     min-width: 300px;
+    max-width: 300px;
+    min-height: 450px;
+    max-height: 450px;
     overflow: hidden;
 
     &--avatar {
-      width: 300px;
-      height: auto;
-      object-fit: cover;
+      width: auto;
+      height: 100%;
     }
   }
   &__info {
     background-color: rgba($grey-blue, 0.3);
+    box-sizing: border-box;
     display: flex;
+    min-height: 450px;
+    max-height: 450px;
     flex-direction: column;
     justify-content: flex-start;
     color: $dark-blue;
     padding: 20px 60px 20px 40px;
+    min-width: 850px;
+    max-width: 850px;
+
     p{
       margin: 0;
       line-height: 150%;
     }
     h2{
-      margin: 10px 0;
+      margin: 40px 0 10px;
     }
     &__link {
       display: flex;
