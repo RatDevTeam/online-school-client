@@ -2,7 +2,10 @@
 .FeedbackSlider {
   &__container {
     display: flex;
-    align-items: center;
+    align-items: start;
+    &--arrow {
+      margin-top: 300px;
+    }
   }
 }
 .FeedbackCard {
