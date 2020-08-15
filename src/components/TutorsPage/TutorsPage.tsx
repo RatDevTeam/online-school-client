@@ -6,39 +6,39 @@ import TeacherBlock from '../courses/TeacherBlock/TeacherBlock';
 
 interface ITutorPageProps {
 	isTeacherLoading: boolean;
-	isTeacherError: any;
+	isTeacherError?: any;
 	teachers: Teacher[];
 	getTeachers: () => void;
 }
 const TutorsPage: React.FC<ITutorPageProps> = ({
 	isTeacherLoading,
-	isTeacherError,
 	teachers,
 	getTeachers,
 }) => {
 	useEffect(() => {
 		getTeachers();
-		console.log(teachers);
 	}, []);
 
-	useEffect(() => {
-		console.log(teachers);
-	}, [teachers]);
-
 	return (
-		<div className="tutors">
+		<div className="Tutors">
 			<h1>Преподаватели ЛикБез</h1>
-			<div className="ui-items-container">
-				{isTeacherLoading ? (
-					<>Загрузка...</>
-				) : (
-					teachers.map((teacher) => (
+			<p>
+				Преподаватели ЛикБез — это команда вдохновленных профессионалов, которые
+				обожают свое дело. Мы помогаем сдать экзамены на желаемые баллы и
+				поступить туда, куда ты хочешь. Если у тебя возникли вопросы, не
+				стесняйся, можешь написать нам лично!
+			</p>
+			{isTeacherLoading ? (
+				<>Загрузка...</>
+			) : (
+				<div className="ui-items-container">
+					{teachers.map((teacher) => (
 						<div className="ui-items-container__item">
 							<TeacherBlock teacher={teacher} key={teacher.name} />
 						</div>
-					))
-				)}
-			</div>
+					))}
+				</div>
+			)}
 		</div>
 	);
 };

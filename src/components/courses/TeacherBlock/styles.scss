@@ -1,29 +1,35 @@
 @import "~Styles/variables";
-.container-teacher {
+.TeacherContainer {
   display: flex;
-  flex-direction: row;
-  max-width: 1200px;
-  height: 200px;
-  align-items: center;
+  max-width: 1000px;
+  min-width: 1000px;
+  &__image {
+    min-width: 300px;
+    overflow: hidden;
 
-  &__avatar {
-    height: 500px;
+    &--avatar {
+      width: 300px;
+      height: auto;
+      object-fit: cover;
+    }
   }
   &__info {
-    background-color: $grey-blue;
+    background-color: rgba($grey-blue, 0.3);
     display: flex;
     flex-direction: column;
-    flex: 1;
-    justify-content: space-between;
+    justify-content: flex-start;
     color: $dark-blue;
+    padding: 20px 60px 20px 40px;
     p{
       margin: 0;
+      line-height: 150%;
     }
     h2{
       margin: 10px 0;
     }
     &__link {
       display: flex;
+      cursor: pointer;
       flex-direction: row;
       padding: 10px 20px;
       max-height: 50px;
@@ -34,12 +40,13 @@
       white-space: nowrap;
       box-sizing: border-box;
       transition: all 300ms ease;
-      margin: 10px 0;
+      margin-top: 30px;
+
       &__text {
         color: $green;
         font-size: 14px;
         margin-left: 10px;
-        font-weight: bold;
+        font-weight: 600;
       }
       &:focus{ outline: none; }
       &:hover {
