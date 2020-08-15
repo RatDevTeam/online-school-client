@@ -5,7 +5,9 @@ interface IStudentCourses {}
 const StudentCourses: React.FC<IStudentCourses> = () => {
 	return (
 		<>
-			<h1>Календарь</h1>
+			<div>
+				1,2,3
+			</div>
 		</>
 	);
 };

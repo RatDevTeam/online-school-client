@@ -1,33 +1,36 @@
 import * as React from 'react';
 import './styles.scss';
-import { useRoute } from 'react-router5';
 
 export interface MenuList {
 	id: number;
 	title: string;
-	linkName: string;
+	page: number;
 }
 
 interface ITopNavigation {
 	menuList: MenuList[];
+	page: number;
+	changePage: (i: number) => void;
 }
 
-const TopNavigation: React.FC<ITopNavigation> = ({ menuList }) => {
-	const { route, router } = useRoute();
-
+const TopNavigation: React.FC<ITopNavigation> = ({
+																									 menuList,
+																									 page,
+																									 changePage,
+																								 }) => {
 	return (
 		<div className="top-navigation">
 			{menuList.map((block) => (
 				<div
 					className={
-						route.name === block.linkName
+						page === block.page
 							? 'top-navigation__tab active'
 							: 'top-navigation__tab'
 					}
 					role="button"
 					tabIndex={0}
-					onClick={() => router.navigate(block.linkName)}
-					onKeyDown={() => router.navigate(block.linkName)}
+					onClick={() => changePage(block.page)}
+					onKeyDown={() => changePage(block.page)}
 				>
 					<span>{block.title}</span>
 				</div>

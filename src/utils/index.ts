@@ -29,11 +29,7 @@ export const getMainMenuList = (authorized: boolean): any[] => {
 				id: 4,
 				routerName: 'student',
 				label: 'Моя страница',
-				submenu: [
-					{ id: 1, routerName: 'student.courses', label: 'Курсы' },
-					{ id: 2, routerName: 'student.scripts', label: 'Скрипты' },
-					{ id: 3, routerName: 'student.home', label: 'Домашнее задание' },
-				],
+				submenu: [{ id: 1, routerName: 'student.courses', label: 'Курсы' }],
 			},
 		];
 	}

@@ -14,9 +14,16 @@ export default [
 		name: 'student',
 		path: '/student',
 		children: [
-			{ name: 'courses', path: '/courses' },
-			{ name: 'scripts', path: '/scripts' },
-			{ name: 'home', path: '/home-work' },
+			{
+				name: 'courses',
+				path: '/courses',
+				children: [
+					{
+						name: 'course',
+						path: '/:id',
+					},
+				],
+			},
 		],
 	},
 ];
