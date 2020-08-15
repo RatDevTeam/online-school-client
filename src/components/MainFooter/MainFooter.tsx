@@ -1,7 +1,6 @@
 import * as React from 'react';
 import './styles.scss';
-import { Anchor } from 'grommet';
-import { Instagram, FacebookOption, LinkUp } from 'grommet-icons';
+import { Instagram, LinkUp } from 'grommet-icons';
 
 /*
  * Подвал для главной страницы
@@ -20,16 +19,9 @@ const MainFooter: React.FC = () => (
 			</div>
 		</div>
 		<div className="footer-container__center">
-			<Anchor
-				a11yTitle="Share feedback on Github"
-				href="https://www.instagram.com/"
-				icon={<Instagram color="brand" />}
-			/>
-			<Anchor
-				a11yTitle="Chat with us on Slack"
-				href="https://www.facebook.com/"
-				icon={<FacebookOption color="brand" />}
-			/>
+			<a href="https://www.instagram.com/likbez_online/">
+				<Instagram color="brand" />
+			</a>
 		</div>
 		<div className="footer-container__right">
 			<p>© Copyright 2020</p>
