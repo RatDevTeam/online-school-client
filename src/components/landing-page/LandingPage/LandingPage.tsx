@@ -134,6 +134,7 @@ const LandingPage: React.FC<ILandingPageProps> = () => {
 					</div>
 				</div>
 				<div className="landing__feedback">
+					<h1 className="landing__advantages__title">Отзывы учеников</h1>
 					<FeedbackSlider />
 				</div>
 			</div>
