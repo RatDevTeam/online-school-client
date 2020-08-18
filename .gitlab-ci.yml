@@ -35,7 +35,7 @@ stages:
     - $SSH_CONNECT ln -sf $RELEASE_PATH $TMP_CURRENT_PATH
     - $SSH_CONNECT mv $TMP_CURRENT_PATH $APP_PATH
     - $SSH_CONNECT "find $RELEASES_PATH/* -maxdepth 0 -type d | sort -r | awk \"NR > ${KEEP_APPS_COUNT:-5}\" | xargs -r rm -r"
-    - echo "Deploy successful"
+    - echo "Deploy successfuld"
 
 build_test:
   extends: .builds
