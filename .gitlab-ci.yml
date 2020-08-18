@@ -22,6 +22,8 @@ deploy_react:
   stage: deploy
   script:
     - echo "Deploying to server"
+    - ls
+    - cd /var/www/
     - cp -rv ./docs/* /var/www/apps/online-school-client/
     - echo "Deployed"
   only:
