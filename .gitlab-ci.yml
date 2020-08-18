@@ -8,66 +8,27 @@ stages:
   stage: build
   tags:
     - web
+    - react
   script:
     - echo "Building app"
     - npm install
     - npm run build
     - echo "Build successful"
-    artifacts:
-      paths:
-        - docs/
+  artifacts:
+    paths:
+      - docs/
 
 .deploys:
   stage: deploy
   tags:
     - web
+    - react
   script:
-    - echo "Deploying"
-    - export SSH_CONNECT="ssh -p $SSH_PORT $DEPLOY_USER@$SERVER_ADDRESS"
-    - export SCP_CONNECT="scp -P $SSH_PORT"
-    - export RELEASE_DIR=$(date --utc +"%Y%m%d%H%M%S")
-    - export RELEASES_PATH=$APP_PATH/releases
-    - export RELEASE_PATH=$RELEASES_PATH/$RELEASE_DIR
-    - export REMOTE_RELEASE_PATH=$DEPLOY_USER@$SERVER_ADDRESS:$RELEASE_PATH
-    - export TMP_CURRENT_PATH=$RELEASES_PATH/current
-    - $SSH_CONNECT mkdir -p $RELEASE_PATH
-    - $SCP_CONNECT -r build/* $REMOTE_RELEASE_PATH
-    - $SSH_CONNECT ln -sf $RELEASE_PATH $TMP_CURRENT_PATH
-    - $SSH_CONNECT mv $TMP_CURRENT_PATH $APP_PATH
-    - $SSH_CONNECT "find $RELEASES_PATH/* -maxdepth 0 -type d | sort -r | awk \"NR > ${KEEP_APPS_COUNT:-5}\" | xargs -r rm -r"
-    - echo "Deploy successfuld"
-
-build_test:
-  extends: .builds
+  - echo "Deploying to server"
+  - cp -rv docs/* /var/www/apps/
+  - echo "Deployed"
+  environment:
+    name: production
+    url: <your deployment url>
   only:
-    refs:
-      - develop
-  environment: test
-
-build_staging:
-  extends: .builds
-  only:
-    refs:
-      - staging
-  environment: staging
-
-build_production:
-  extends: .builds
-  only:
-    refs:
-      - master
-  environment: production
-
-deploy_staging:
-  extends: .deploys
-  only:
-    refs:
-      - staging
-  environment: staging
-
-deploy_production:
-  extends: .deploys
-  only:
-    refs:
-      - master
-  environment: production
+    - master
