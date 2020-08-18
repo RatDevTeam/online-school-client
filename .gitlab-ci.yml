@@ -8,6 +8,7 @@ build_react:
 
   script:
     - echo "====== Install dependencied ======"
+    - npm i
     - echo "====== Build react APP ======"
     - npm run build
 
