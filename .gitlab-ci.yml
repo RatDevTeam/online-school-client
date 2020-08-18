@@ -8,7 +8,6 @@ build_react:
 
   script:
     - echo "====== Install dependencied ======"
-    - npm i
     - echo "====== Build react APP ======"
     - npm run build
 
@@ -23,8 +22,12 @@ deploy_react:
   script:
     - echo "Deploying to server"
     - ls
+    - cd
     - cd /var/www/
     - cp -rv ./docs/* /var/www/apps/online-school-client/
     - echo "Deployed"
+  environment:
+    name: production
+    url: 146.185.218.163
   only:
     - master
