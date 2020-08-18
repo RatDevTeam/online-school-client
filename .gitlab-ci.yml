@@ -2,7 +2,7 @@ stages:
   - build
   - deploy
 
-.builds:
+ build:
   stage: build
   tags:
     - web
@@ -16,7 +16,7 @@ stages:
     paths:
       - docs/
 
-.deploys:
+ deploy_production:
   stage: deploy
   tags:
     - web
@@ -29,38 +29,3 @@ stages:
     name: production
   only:
     - master
-
-build_test:
-  extends: .builds
-  only:
-    refs:
-      - develop
-  environment: test
-
-build_staging:
-  extends: .builds
-  only:
-    refs:
-      - staging
-  environment: staging
-
-build_production:
-  extends: .builds
-  only:
-    refs:
-      - master
-  environment: production
-
-deploy_staging:
-  extends: .deploys
-  only:
-    refs:
-      - staging
-  environment: staging
-
-deploy_production:
-  extends: .deploys
-  only:
-    refs:
-      - master
-  environment: production
