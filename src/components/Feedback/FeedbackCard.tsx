@@ -1,7 +1,8 @@
 import React from 'react';
 import { FeedbackSchema } from '../../schemas/feedback.schema';
 import feedbackList from './data.json';
-
+// @ts-ignore
+import bg from '../../../public/bg-courses.svg';
 import './styles.scss';
 
 interface IFeedbackCard {
@@ -15,9 +16,10 @@ const FeedbackCard: React.FC<IFeedbackCard> = ({ activeIndex, className }) => {
 		<div className={className}>
 			<div className="FeedbackCard__imageContainer">
 				<img
-					src={feedbackItem.imgUrl}
+					src={feedbackItem.imgUrl || bg}
 					alt="Студент ЛикБез"
 					className="FeedbackCard__imageContainer--image"
+					style={feedbackItem.customStyle}
 				/>
 			</div>
 			<div className="FeedbackCard__mainContainer">
