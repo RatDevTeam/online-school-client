@@ -24,9 +24,11 @@ deploy_react:
     - echo "Deploying to server"
     - ls
     - cd ..
+    - ls
     - cd ..
+    - ls
     - cd /var/www/
-    - cp -rv ./docs/* /var/www/apps/online-school-client/
+    - cp -rv ./docs/* ../../var/www/apps/online-school-client/
     - echo "Deployed"
   environment:
     name: production
