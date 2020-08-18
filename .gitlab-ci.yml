@@ -23,7 +23,8 @@ deploy_react:
   script:
     - echo "Deploying to server"
     - ls
-    - cd
+    - cd ..
+    - cd ..
     - cd /var/www/
     - cp -rv ./docs/* /var/www/apps/online-school-client/
     - echo "Deployed"
