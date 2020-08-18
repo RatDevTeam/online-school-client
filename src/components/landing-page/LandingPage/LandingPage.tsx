@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import FeedbackSlider from '../../Feedback/FeedbackSlider';
 import AOS from 'aos';
 import advantages from '../../../utils/advantages';
 
@@ -113,7 +114,9 @@ const LandingPage: React.FC<ILandingPageProps> = () => {
 							</p>
 							<button
 								type="button"
-								onClick={() => window.open('http://vk.com')}
+								onClick={() =>
+									window.open('https://www.instagram.com/likbez_online/')
+								}
 							>
 								Подписаться
 							</button>
@@ -127,6 +130,10 @@ const LandingPage: React.FC<ILandingPageProps> = () => {
 							</ul>
 						</div>
 					</div>
+				</div>
+				<div className="landing__feedback">
+					<h1 className="landing__advantages__title">Отзывы учеников</h1>
+					<FeedbackSlider />
 				</div>
 			</div>
 		</>
