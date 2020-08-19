@@ -2,6 +2,7 @@ import React from 'react';
 import './styles.scss';
 import { Chat } from 'grommet-icons';
 import { Teacher } from '../../../schemas/teacher.schema';
+import SubjectTag from '../../SubjectTag/SubjectTag';
 // @ts-ignore
 import img from '../../../../public/bg-courses.svg';
 
@@ -20,7 +21,15 @@ const TeacherBlock: React.FC<ITeacherBlock> = ({ teacher }) => {
 				/>
 			</div>
 			<div className="TeacherContainer__info">
-				<h2>{teacher.name}</h2>
+				<div className="TeacherContainer__info--title">
+					<h2>{teacher.name}</h2>
+					{teacher.subject && (
+						<SubjectTag
+							title={teacher.subject.title}
+							color={teacher.subject.color}
+						/>
+					)}
+				</div>
 				<p>{teacher.description}</p>
 				<div
 					role="button"
