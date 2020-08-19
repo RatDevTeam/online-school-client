@@ -8,6 +8,7 @@ stages:
   stage: build
   tags:
     - web
+    - react
   artifacts:
     paths:
       - build/
@@ -27,6 +28,7 @@ stages:
   stage: deploy
   tags:
     - web
+    - react
   only:
     variables:
       - $APP_PATH
