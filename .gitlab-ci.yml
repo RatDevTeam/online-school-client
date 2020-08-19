@@ -10,7 +10,7 @@ stages:
     - web
   artifacts:
     paths:
-      - build/
+      - docs/
   before_script:
     - unset CI
     - echo "Creating .env"
@@ -53,7 +53,7 @@ stages:
     - export REMOTE_RELEASE_PATH=$DEPLOY_USER@$SERVER_ADDRESS:$RELEASE_PATH
     - export TMP_CURRENT_PATH=$RELEASES_PATH/current
     - $SSH_CONNECT mkdir -p $RELEASE_PATH
-    - $SCP_CONNECT -r build/* $REMOTE_RELEASE_PATH
+    - $SCP_CONNECT -r docs/* $REMOTE_RELEASE_PATH
     - $SSH_CONNECT ln -sf $RELEASE_PATH $TMP_CURRENT_PATH
     - $SSH_CONNECT mv $TMP_CURRENT_PATH $APP_PATH
     - $SSH_CONNECT "find $RELEASES_PATH/* -maxdepth 0 -type d | sort -r | awk \"NR > ${KEEP_APPS_COUNT:-5}\" | xargs -r rm -r"
