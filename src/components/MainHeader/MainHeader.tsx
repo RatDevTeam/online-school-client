@@ -9,6 +9,13 @@ import { getMainMenuList } from '../../utils';
 const MainHeader: React.FC = () => {
 	const [rightClass, setRightClass] = useState<string[]>(['header__right']);
 	const menu = getMainMenuList(false);
+	const onClickIconMenu = () => {
+		if (rightClass.includes('active')) {
+			setRightClass(['header__right']);
+		} else {
+			setRightClass([...rightClass, 'active']);
+		}
+	};
 	return (
 		<header
 			className="header"
@@ -17,7 +24,13 @@ const MainHeader: React.FC = () => {
 			<Link routeName="home">
 				<div className="header__title" id="header" />
 			</Link>
-			<span className="header__icon-menu" role="button" tabIndex={0}>
+			<span
+				className="header__icon-menu"
+				role="button"
+				tabIndex={0}
+				onClick={onClickIconMenu}
+				onKeyDown={onClickIconMenu}
+			>
 				<Menu size="30px" color="#000000" />
 			</span>
 			<div className={rightClass.join(' ')}>
