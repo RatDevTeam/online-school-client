@@ -7,7 +7,7 @@ import { Store } from './redux/store';
 import createRouter from './router/create-router';
 import App from './App';
 
-axios.defaults.baseURL = 'https://likbez-school/api';
+axios.defaults.baseURL = 'https://likbez-school.ru/api';
 
 axios.interceptors.request.use(
 	(request) => {
