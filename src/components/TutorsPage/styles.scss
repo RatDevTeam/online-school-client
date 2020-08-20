@@ -1,0 +1,14 @@
+@import "src/styles/breakpoint.mixin";
+
+.tutors {
+  padding: 30px 3em;
+  @include breakpoint(tablet-portrait-above) {
+    padding: 50px 6em;
+  }
+  &__cards {
+    @include breakpoint(desktop-above) {
+      align-items: center;
+      margin: 20px 0;
+    }
+  }
+}

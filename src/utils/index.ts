@@ -24,7 +24,7 @@ export const getMainMenuList = (authorized: boolean): any[] => {
 		return [
 			{ id: 1, routerName: 'courses.list', label: 'Курсы' },
 			{ id: 2, routerName: 'courses.list', label: 'Вебинары' },
-			{ id: 3, routerName: 'courses.list', label: 'Преподаватели' },
+			{ id: 3, routerName: 'tutors', label: 'Преподаватели' },
 			{
 				id: 4,
 				routerName: 'student',
@@ -41,6 +41,6 @@ export const getMainMenuList = (authorized: boolean): any[] => {
 		{ id: 1, routerName: 'home', label: 'О нас' },
 		{ id: 2, routerName: 'courses.list', label: 'Курсы' },
 		{ id: 3, routerName: 'courses.list', label: 'Вебинары' },
-		{ id: 4, routerName: 'courses.list', label: 'Преподаватели' },
+		{ id: 4, routerName: 'tutors', label: 'Преподаватели' },
 	];
 };

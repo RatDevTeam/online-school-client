@@ -1,4 +1,5 @@
 import { Reducer } from './reducer.schema';
+import { Subject } from './subject.schema';
 
 export interface TeacherReducer extends Reducer<Teacher[]> {}
 
@@ -11,16 +12,20 @@ export class Teacher implements ITeacher {
 
 	vkUrl: string;
 
+	subject: Subject;
+
 	constructor(
 		name: string,
 		description: string,
 		imgUrl: string,
-		vkUrl: string
+		vkUrl: string,
+		subject: Subject
 	) {
 		this.name = name;
 		this.description = description;
 		this.imgUrl = imgUrl;
 		this.vkUrl = vkUrl;
+		this.subject = subject;
 	}
 }
 
@@ -29,4 +34,5 @@ export interface ITeacher {
 	description: string;
 	imgUrl: string;
 	vkUrl: string;
+	subject?: Subject;
 }
