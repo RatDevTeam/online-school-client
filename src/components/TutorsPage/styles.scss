@@ -1,6 +1,6 @@
 @import "src/styles/breakpoint.mixin";
 
-.Tutors {
+.tutors {
   padding: 30px 3em;
   @include breakpoint(tablet-portrait-above) {
     padding: 50px 6em;

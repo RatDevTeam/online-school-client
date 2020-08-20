@@ -20,7 +20,7 @@ const TutorsPage: React.FC<ITutorPageProps> = ({
 	}, []);
 
 	return (
-		<div className="Tutors">
+		<div className="tutors">
 			<h1>Преподаватели ЛикБез</h1>
 			<p>
 				Преподаватели ЛикБез — это команда вдохновленных профессионалов, которые
@@ -33,7 +33,7 @@ const TutorsPage: React.FC<ITutorPageProps> = ({
 			) : (
 				<div className="ui-items-container">
 					{teachers.map((teacher) => (
-						<div className="ui-items-container__item Tutors__cards">
+						<div className="ui-items-container__item tutors__cards">
 							<TeacherBlock teacher={teacher} key={teacher.name} />
 						</div>
 					))}

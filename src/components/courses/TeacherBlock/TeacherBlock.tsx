@@ -12,20 +12,20 @@ interface ITeacherBlock {
 
 const TeacherBlock: React.FC<ITeacherBlock> = ({ teacher }) => {
 	return (
-		<div className="TeacherContainer">
-			<div className="TeacherContainer__decoration TeacherContainer__decoration--1" />
-			<div className="TeacherContainer__decoration TeacherContainer__decoration--2" />
-			<div className="TeacherContainer__decoration TeacherContainer__decoration--3" />
+		<div className="teacher-container">
+			<div className="teacher-container__decoration teacher-container__decoration--1" />
+			<div className="teacher-container__decoration teacher-container__decoration--2" />
+			<div className="teacher-container__decoration teacher-container__decoration--3" />
 
-			<div className="TeacherContainer__image">
+			<div className="teacher-container__image">
 				<img
-					className="TeacherContainer__image--avatar"
+					className="teacher-container__image--avatar"
 					src={teacher.imgUrl || img}
 					alt={teacher.name}
 				/>
 			</div>
-			<div className="TeacherContainer__info">
-				<div className="TeacherContainer__info--title">
+			<div className="teacher-container__info">
+				<div className="teacher-container__info--title">
 					<h2>{teacher.name}</h2>
 					{teacher.subject && (
 						<SubjectTag
@@ -38,7 +38,7 @@ const TeacherBlock: React.FC<ITeacherBlock> = ({ teacher }) => {
 				<div
 					role="button"
 					tabIndex={0}
-					className="TeacherContainer__info__link"
+					className="teacher-container__info__link"
 					onClick={(event: React.MouseEvent) => {
 						event.preventDefault();
 						window.open(`${teacher.vkUrl}`);
@@ -49,7 +49,7 @@ const TeacherBlock: React.FC<ITeacherBlock> = ({ teacher }) => {
 					}}
 				>
 					<Chat color="#087e8b" />
-					<div className="TeacherContainer__info__link__text">
+					<div className="teacher-container__info__link__text">
 						Связаться с преподавателем
 					</div>
 				</div>
