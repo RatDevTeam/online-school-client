@@ -108,7 +108,7 @@ const LandingPage: React.FC<ILandingPageProps> = () => {
 					<div className="landing__free-webinar__body">
 						<div className="landing__free-webinar__body__left">
 							<p>
-								Подпишись на нас в Инстаграмме
+								Подпишись на нас в Инстаграме
 								<br />и получи приглашение на первое занятие. <br /> Пора
 								готовиться!
 							</p>

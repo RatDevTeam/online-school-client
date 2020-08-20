@@ -1,4 +1,11 @@
-/** Colors */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;300;400;600;700&family=IBM+Plex+Serif:wght@700&display=swap');
+
+/* Fonts */
+$main-font: 'IBM Plex Serif', serif;
+$secondary-font: 'IBM Plex Sans', sans-serif; //available font-weight 100 300 400 600 700
+
+/* Colours */
 $white: #FFF;
 $grey-blue: #C1CFDA;
 $grey-text: #979797;
@@ -13,7 +20,10 @@ $saturated-red: #FF4040;
 $img-free-webinar: url('~Public/free-webinar.jpg');
 $img-likbez-courses: url('~Public/likbez-courses.svg');
 $img-likbez-main: url('~Public/likbez-main.svg');
+$img-likbez-logo-with-text: url('~Public/likbez-original-title-for-web.svg');
+$img-likbez-logo: url('~Public/likbez-original-for-web.svg');
+$img-likbez-empty-courses: url('~Public/bg-courses.svg');
+$img-likbez-main: url('~Public/likbez-main.svg');
+$img-likbez-long: url('~Public/likbez-logo-long.svg');
 $img-tick: url('~Public/tick.svg');
 $img-ok: url('~Public/ok.svg');
-$img-likbez-long: url('~Public/likbez-logo-long.svg');
-$img-likbez-logo: url('~Public/likbez-original-title-for-web.svg');

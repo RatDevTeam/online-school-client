@@ -1,0 +1,21 @@
+@mixin breakpoint($device-width) {
+
+  @if $device-width == sm-phone {
+    @media (max-width: 350px) { @content; }
+  }
+  @else if $device-width == phone-above {
+    @media (min-width: 480px) { @content; }
+  }
+  @else if $device-width == tablet-portrait-above {
+    @media (min-width: 768px) { @content; }
+  }
+  @else if $device-width == tablet-landscape-above {
+    @media (min-width: 1024px) { @content; }
+  }
+  @else if $device-width == desktop-above {
+    @media (min-width: 1200px) { @content; }
+  }
+  @else if $device-width == lg-desktop-above {
+    @media (min-width: 1400px) { @content; }
+  }
+}
