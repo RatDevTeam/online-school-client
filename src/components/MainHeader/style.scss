@@ -57,7 +57,8 @@
     }
     &__submenu {
       flex-direction: column;
-      display: none;
+      display: flex;
+      visibility: hidden;
       width: 180px;
       padding: 0;
       top: 66px;
@@ -75,22 +76,24 @@
     }
   }
   &__icon-menu {
-    display: none;
+    display: block;
+    visibility: hidden;
     align-self: center;
   }
   @media (max-width: 1024px) {
     &__icon-menu {
-      display: block;
+      visibility: visible;
     }
     &__right {
-      display: none;
+      visibility: hidden;
       &.active {
-        display: flex;
+        visibility: visible;
       }
       position: absolute;
       right: 0;
       top: 70px;
       flex-direction: column;
+      background-color: $grey-blue;
       nav {
         height: max-content;
         margin: 0;
