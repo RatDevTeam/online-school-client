@@ -1,0 +1,28 @@
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 504.73 87.39">
+    <defs>
+        <style>.cls-1{font-size:36.57px;font-family:IBMPlexSans-Bold, IBM Plex
+            Sans;font-weight:700;}.cls-1,.cls-5{fill:#0b3954;}.cls-2{fill:#ff5a5f;}.cls-3{letter-spacing:-0.01em;}.cls-4{letter-spacing:-0.01em;}.cls-6{fill:#c1cfda;}
+        </style>
+    </defs>
+    <title>likbez-online-school-long</title>
+    <text class="cls-1" transform="translate(71.07 55.56)">Лик
+        <tspan class="cls-2" x="71.02" y="0">Б</tspan>
+        <tspan x="95.05" y="0">ез | Онлайн</tspan>
+        <tspan class="cls-2" x="303.4" y="0">-</tspan>
+        <tspan x="318.14" y="0">ш</tspan>
+        <tspan class="cls-3" x="349" y="0">к</tspan>
+        <tspan class="cls-4" x="370.18" y="0">о</tspan>
+        <tspan x="390.51" y="0">ла</tspan>
+    </text>
+    <path class="cls-5"
+          d="M24.55,43.55h0L.25,58.73s19,14,23.38,29V66.21a3.8,3.8,0,1,1,1.83,0v21.6C29.87,73,48.84,58.73,48.84,58.73Z"
+          transform="translate(3.09 -0.11)"/>
+    <path class="cls-5"
+          d="M24.55,15.91c-8.39,0-15.19,8.5-15.19,19V47.8l15.19,7.59L39.73,47.8V34.89C39.73,24.41,32.93,15.91,24.55,15.91Z"
+          transform="translate(3.09 -0.11)"/>
+    <path class="cls-2"
+          d="M24.55,15.91S30,5.28,21.81,1.33C11.43-3.67,5.63,8.46-3.09,6.8c0,0,3.64,4.25,13.36,2.43C4.8,13.48,1.16,12.26-2.79,12c0,0,8.2,6.07,14,2.43C20.27,8.65,24.24,12.57,24.55,15.91Z"
+          transform="translate(3.09 -0.11)"/>
+    <polygon class="cls-6" points="27.7 24.36 24.17 16.3 27.7 11.61 31.23 16.3 27.7 24.36"/>
+    <polygon class="cls-6" points="27.64 32.5 11.24 36.75 12.45 47.69 27.64 55.28 42.82 47.69 44.04 36.75 27.64 32.5"/>
+</svg>

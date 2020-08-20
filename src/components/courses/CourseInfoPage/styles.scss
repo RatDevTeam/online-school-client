@@ -1,0 +1,48 @@
+@import "~Styles/variables";
+.course-info {
+  padding: 0 6em 0 6em;
+  &__description {
+    fieldset {
+      border: 1px solid $grey-blue;
+      padding: 30px;
+    }
+    legend {
+      color: $dark-blue;
+      padding: 0 10px;
+    }
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      &__item {
+        display: flex;
+flex-direction: column;
+        &-title {
+          color: $grey-text;
+          font-size: 12px;
+        }
+        &-body{
+          display: flex;
+          align-items: center;
+
+          p{
+            margin-left: 15px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+  &__teachers {
+    margin-top: 60px;
+  }
+.tag{
+  margin: 0 15px;
+}
+  h1, h2, p {
+    color: $dark-blue;
+  }
+  &__header {
+  display: flex;
+  align-ite: center;
+  }
+}
