@@ -13,6 +13,10 @@ interface ITeacherBlock {
 const TeacherBlock: React.FC<ITeacherBlock> = ({ teacher }) => {
 	return (
 		<div className="TeacherContainer">
+			<div className="TeacherContainer__decoration TeacherContainer__decoration--1" />
+			<div className="TeacherContainer__decoration TeacherContainer__decoration--2" />
+			<div className="TeacherContainer__decoration TeacherContainer__decoration--3" />
+
 			<div className="TeacherContainer__image">
 				<img
 					className="TeacherContainer__image--avatar"

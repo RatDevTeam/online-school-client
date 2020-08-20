@@ -11,7 +11,7 @@ const SubjectTag: React.FC<ISubjectTagProps> = ({ title, color }) => {
 	};
 
 	return (
-		<div className="ui-button" style={style}>
+		<div className="ui-tag" style={style}>
 			{title}
 		</div>
 	);
