@@ -12,7 +12,7 @@ module.exports = {
 	output: {
 		path: path.join(__dirname, './docs'),
 		publicPath: '/',
-		filename: '[name].[contenthash].js',
+		filename: '[name].[hash].js',
 	},
 	optimization: {
 		moduleIds: 'hashed',

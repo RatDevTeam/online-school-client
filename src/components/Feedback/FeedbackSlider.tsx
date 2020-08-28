@@ -1,21 +1,24 @@
 import React, { useState } from 'react';
-import FeedbackCard from './FeedbackCard';
 import { CaretNext, CaretPrevious } from 'grommet-icons';
+import './styles.scss';
+
+import FeedbackCard from './FeedbackCard';
 import feedbackList from './data.json';
 
-import './styles.scss';
 interface IFeedbackSlider {}
 const FeedbackSlider: React.FC<IFeedbackSlider> = () => {
 	const [currentIndex, setCurrentIndex] = useState<number>(0);
 	const [length] = useState<number>(feedbackList.length);
 
 	const showPrevious = () => {
-		if (currentIndex === 0) return;
-		else setCurrentIndex(currentIndex - 1);
+		if (currentIndex !== 0) {
+			setCurrentIndex(currentIndex - 1);
+		}
 	};
 	const showNext = () => {
-		if (currentIndex === length - 1) return;
-		else setCurrentIndex(currentIndex + 1);
+		if (currentIndex === length - 1) {
+			setCurrentIndex(currentIndex + 1);
+		}
 	};
 
 	return (
