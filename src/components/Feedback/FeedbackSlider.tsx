@@ -16,7 +16,7 @@ const FeedbackSlider: React.FC<IFeedbackSlider> = () => {
 		}
 	};
 	const showNext = () => {
-		if (currentIndex === length - 1) {
+		if (currentIndex !== length - 1) {
 			setCurrentIndex(currentIndex + 1);
 		}
 	};
