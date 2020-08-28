@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import FeedbackSlider from '../../Feedback/FeedbackSlider';
 import AOS from 'aos';
+import FeedbackSlider from '../../Feedback/FeedbackSlider';
 import advantages from '../../../utils/advantages';
 
 import './styles.scss';

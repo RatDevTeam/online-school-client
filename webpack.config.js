@@ -12,7 +12,20 @@ module.exports = {
 	output: {
 		path: path.join(__dirname, './docs'),
 		publicPath: '/',
-		filename: 'bundle.js',
+		filename: '[name].[hash].js',
+	},
+	optimization: {
+		moduleIds: 'hashed',
+		runtimeChunk: 'single',
+		splitChunks: {
+			cacheGroups: {
+				vendor: {
+					test: /[\\/]node_modules[\\/]/,
+					name: 'vendors',
+					chunks: 'all',
+				},
+			},
+		},
 	},
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js'],
@@ -59,6 +72,7 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
+			title: 'Caching',
 			template: './src/index.html',
 		}),
 		new webpack.DefinePlugin({
