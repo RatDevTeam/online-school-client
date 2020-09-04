@@ -9,6 +9,7 @@ interface ICoursePreview {
 	color: string;
 	date: string;
 	price: string;
+	img: string;
 }
 const CoursePreviewCard: React.FC<ICoursePreview> = ({
 	title,
@@ -16,10 +17,11 @@ const CoursePreviewCard: React.FC<ICoursePreview> = ({
 	color,
 	date,
 	price,
+	img,
 }) => {
 	return (
 		<>
-			<div className="container-course-preview__image">
+			<div className="container-course-preview__image" style={{backgroundImage: img ? `url(${img})` : ''}}>
 				<div className="container-course-preview__image__tags">
 					<div className="ui-tag" style={{ backgroundColor: color }}>
 						{subject}

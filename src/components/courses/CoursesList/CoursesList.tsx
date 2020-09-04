@@ -139,6 +139,7 @@ const subjectsPage: React.FC<ISubjectsPage> = ({
 									subject={course.subject.title}
 									price={course.price}
 									date={course.dateStart}
+									img={course.imageUrl}
 								/>
 							</div>
 						);

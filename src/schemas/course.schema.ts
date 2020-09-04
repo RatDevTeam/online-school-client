@@ -76,16 +76,18 @@ export interface ICourse {
 
 export enum CourseTypes {
 	MASTER,
-	COURSES,
+	SMART,
+	LITE,
 }
 
 export interface IHomeWork {
 	date: string;
 	title: string;
 	description: string;
+	url: string;
 }
 
 export interface IScript {
 	title: string;
-	link: string;
+	url: string;
 }

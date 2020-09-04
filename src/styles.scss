@@ -151,7 +151,7 @@ button {
   &__item {
     display: flex;
     flex-direction: column;
-    flex: 1 0 auto;
+    flex: 0 0 auto;
     @include calc(flex-basis, '(100% - 160px)/4');
     margin: 20px;
   }
